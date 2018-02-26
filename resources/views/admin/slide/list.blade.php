@@ -26,22 +26,16 @@
 					</tr>
 				</thead>
 				<tbody>
+					@foreach($list as $value)
 					<tr class="odd gradeX" align="center">
-						<td>1</td>
-						<td>Tin Tức</td>
-						<td>None</td>
-						<td>Hiện</td>
-						<td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="#"> Delete</a></td>
-						<td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Edit</a></td>
+						<td>{{$value->id}}</td>
+						<td>{{$value->name}}</td>
+						<td><img width="200px" src="upload/slide/{{$value->image}}" /></td>
+						<td>{{$value->link}}</td>
+						<td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/slide/delete/{{$value->id}}"> Delete</a></td>
+						<td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/slide/edit/{{$value->id}}">Edit</a></td>
 					</tr>
-					<tr class="even gradeC" align="center">
-						<td>2</td>
-						<td>Bóng Đá</td>
-						<td>Thể Thao</td>
-						<td>Ẩn</td>
-						<td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="#"> Delete</a></td>
-						<td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Edit</a></td>
-					</tr>
+					@endforeach
 				</tbody>
 			</table>
 		</div>

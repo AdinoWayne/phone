@@ -18,3 +18,13 @@ use App\dSlide;
 Route::get('test',function(){
 	return view('admin.slide.list');
 });
+Route::group(['prefix' => 'admin'], function() {
+    Route::group(['prefix' => 'slide'], function() {
+		Route::get('list','slideController@getList');
+		Route::get('edit/{id}','slideController@getEdit');
+		Route::post('edit/{id}','slideController@postEdit');
+		Route::get('add','slideController@getAdd');
+		Route::post('add','slideController@postAdd');
+		Route::get('delete/{id}','slideController@getDelete');
+    });
+});
