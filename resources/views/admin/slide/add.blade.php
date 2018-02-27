@@ -26,11 +26,11 @@
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group">
 						<label>name</label>
-						<input class="form-control" name="txtTitle"/>
+						<input class="form-control" name="txtName"/>
 					</div>
 					<div class="form-group">
 						<label>Link</label>
-						<textarea class="form-control" rows="3" name="txtlink"></textarea>
+						<input class="form-control" name="txtlink">
 					</div>
 					<div class="form-group">
 						<label>Upload Image</label>

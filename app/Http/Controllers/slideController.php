@@ -22,4 +22,32 @@ class slideController extends Controller
         $current->delete();
         return redirect('admin/slide/list');
     }
+    public function postAdd(Request $request){
+        $this->validate($request,
+            [
+                'txtName' =>'required|min:3|max:100',
+            ],
+            [
+                'txtName.required' =>'Bạn chưa nhập tên',
+                'txtName.min' =>'Tên quá ít kí tự',
+                'txtName.max' =>'Tên quá dài',
+            ]);
+        $current = new dSlide;
+        $current->name = $request->txtName;
+        $current->link =$request->txtlink;   
+        if($request->hasFile('txtHinh')){
+            $file =$request->file('txtHinh');
+            $name =$file->getClientOriginalName();
+            $hinh =str_random(4)."_".$name;
+            while (file_exists("upload/slide/".$hinh)) {
+                $hinh =str_random(4)."_".$name;
+            }
+            $file->move("upload/slide",$hinh);
+            $current->image =$hinh;
+        }else{
+            $current->image ="";
+        }
+        $current->save();
+        return redirect('admin/slide/add')->with('thongbao','Thêm thành công');
+    }
 }
