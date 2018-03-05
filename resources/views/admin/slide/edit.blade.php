@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Slide
-					<small>Add</small>
+					<small>Edit</small>
 				</h1>
 			</div>
 			<!-- /.col-lg-12 -->
@@ -18,26 +18,25 @@
 					@endforeach
 				</div>
 				@endif
-				@if(session('thongbao'))
+{{-- 				@if(session('thongbao'))
 				<div class="alert alert-success">{{session('thongbao')}}
 				</div>
-				@endif
+				@endif --}}
 				<form action="" method="POST" enctype="multipart/form-data">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group">
 						<label>name</label>
-						<input class="form-control" name="txtTitle" value="{{$slide->Ten}}" />
+						<input class="form-control" name="txtName" value="{{$slide->name}}"/>
 					</div>
 					<div class="form-group">
 						<label>Link</label>
-						<textarea class="form-control" rows="3" name="txtlink">{{$slide->link}}</textarea>
+						<input class="form-control" name="txtlink" value="{{$slide->link}}"/>
 					</div>
 					<div class="form-group">
 						<label>Upload Image</label>
-						<p><img width="400px" src="upload/slide/{{$slide->Hinh}}"></p>
 						<input type="file" name="txtHinh" class="form-control"/>
 					</div>
-					<button type="submit" class="btn btn-default">Category Add</button>
+					<button type="submit" class="btn btn-default">Slide Edit</button>
 					<button type="reset" class="btn btn-default">Reset</button>
 					<form>
 					</div>
@@ -47,5 +46,5 @@
 			<!-- /.container-fluid -->
 		</div>
 		<!-- /#page-wrapper -->
-<!-- /#page-wrapper -->
+
 @endsection

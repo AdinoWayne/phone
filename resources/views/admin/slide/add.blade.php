@@ -36,7 +36,7 @@
 						<label>Upload Image</label>
 						<input type="file" name="txtHinh" class="form-control"/>
 					</div>
-					<button type="submit" class="btn btn-default">Category Add</button>
+					<button type="submit" class="btn btn-default">Slide Add</button>
 					<button type="reset" class="btn btn-default">Reset</button>
 					<form>
 					</div>
