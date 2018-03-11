@@ -39,43 +39,55 @@
     				</ul>
     				<!-- /.nav-second-level -->
     			</li>
-    			<li>
-    				<a href="#"><i class="fa fa-cube fa-fw"></i> News<span class="fa arrow"></span></a>
-    				<ul class="nav nav-second-level">
-    					<li>
-    						<a href="admin/news/list">List News</a>
-    					</li>
-    					<li>
-    						<a href="admin/news/add">Add News</a>
-    					</li>
-    				</ul>
-    				<!-- /.nav-second-level -->
-    			</li>
-    			<li>
-    				<a href="#"><i class="fa fa-cube fa-fw"></i> Slide<span class="fa arrow"></span></a>
-    				<ul class="nav nav-second-level">
-    					<li>
-    						<a href="admin/slide/list">List Slide</a>
-    					</li>
-    					<li>
-    						<a href="admin/slide/add">Add Slide</a>
-    					</li>
-    				</ul>
-    				<!-- /.nav-second-level -->
-    			</li>
-    			<li>
-    				<a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
-    				<ul class="nav nav-second-level">
-    					<li>
-    						<a href="admin/user/add">List User</a>
-    					</li>
-    					<li>
-    						<a href="admin/user/add">Add User</a>
-    					</li>
-    				</ul>
-    				<!-- /.nav-second-level -->
-    			</li>
-    		</ul>
-    	</div>
-    	<!-- /.sidebar-collapse -->
-    </div>
+                <li>
+                    <a href="#"><i class="fa fa-cube fa-fw"></i>Group Product<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="admin/groupproduct/list">List Group Product</a>
+                        </li>
+                        <li>
+                            <a href="admin/groupproduct/add">Add Group Product</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-cube fa-fw"></i> News<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                       <li>
+                          <a href="admin/news/list">List News</a>
+                      </li>
+                      <li>
+                          <a href="admin/news/add">Add News</a>
+                      </li>
+                  </ul>
+                  <!-- /.nav-second-level -->
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-cube fa-fw"></i> Slide<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                   <li>
+                      <a href="admin/slide/list">List Slide</a>
+                  </li>
+                  <li>
+                      <a href="admin/slide/add">Add Slide</a>
+                  </li>
+              </ul>
+              <!-- /.nav-second-level -->
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+               <li>
+                  <a href="admin/user/add">List User</a>
+              </li>
+              <li>
+                  <a href="admin/user/add">Add User</a>
+              </li>
+          </ul>
+          <!-- /.nav-second-level -->
+      </li>
+  </ul>
+</div>
+<!-- /.sidebar-collapse -->
+</div>

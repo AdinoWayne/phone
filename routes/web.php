@@ -43,4 +43,20 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::post('add','groupproductController@postAdd');
 		Route::get('delete/{id}','groupproductController@getDelete');
 	});
+	Route::group(['prefix' => 'product'], function() {
+		Route::get('list','productController@getList');
+		Route::get('edit/{id}','productController@getEdit');
+		Route::post('edit/{id}','productController@postEdit');
+		Route::get('add','productController@getAdd');
+		Route::post('add','productController@postAdd');
+		Route::get('delete/{id}','productController@getDelete');
+	});
+	Route::group(['prefix' => 'news'], function() {
+		Route::get('list','newsController@getList');
+		Route::get('edit/{id}','newsController@getEdit');
+		Route::post('edit/{id}','newsController@postEdit');
+		Route::get('add','newsController@getAdd');
+		Route::post('add','newsController@postAdd');
+		Route::get('delete/{id}','newsController@getDelete');
+	});
 });
