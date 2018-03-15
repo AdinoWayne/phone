@@ -8,8 +8,8 @@
 				<h1 class="page-header">slide
 					<small>List</small>
 				</h1>
-				@if(session('thongbao'))
-				<div class="alert alert-success">{{session('thongbao')}}
+				@if(session('Thongbao'))
+				<div class="alert alert-success">{{session('Thongbao')}}
 				</div>
 				@endif
 			</div>

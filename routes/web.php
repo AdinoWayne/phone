@@ -62,4 +62,15 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::post('add','newsController@postAdd');
 		Route::get('delete/{id}','newsController@getDelete');
 	});
+	Route::group(['prefix' => 'user'], function() {
+		Route::get('list','userController@getList');
+		Route::get('edit/{id}','userController@getEdit');
+		Route::post('edit/{id}','userController@postEdit');
+		Route::get('add','userController@getAdd');
+		Route::post('add','userController@postAdd');
+		Route::get('delete/{id}','userController@getDelete');
+	});
 });
+Route::get('admin/login','userController@getLogin');
+Route::post('admin/login','userController@postLogin');
+Route::get('admin/logout','userController@getlogout');

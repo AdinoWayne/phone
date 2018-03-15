@@ -76,6 +76,6 @@ class slideController extends Controller
             $current->image ="";
         }
         $current->save();
-        return redirect('admin/slide/list')->with('thongbao','Sua thành công');
+        return redirect('admin/slide/list')->with('Thongbao','Sua thành công');
     }
 }

@@ -18,8 +18,8 @@
 					@endforeach
 				</div>
 				@endif
-				@if(session('thongbao'))
-				<div class="alert alert-success">{{session('thongbao')}}
+				@if(session('Thongbao'))
+				<div class="alert alert-success">{{session('Thongbao')}}
 				</div>
 				@endif
 				<form action="admin/slide/add" method="POST" enctype="multipart/form-data">
