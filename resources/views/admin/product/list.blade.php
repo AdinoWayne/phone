@@ -38,7 +38,7 @@
 						<th>{{$value->id}}</th>
 						<th>{{$value->name}}</th>
 						<th>{{$value->price}}</th>
-						<th>{{$value->content}}</th>
+						<th class="comment">{{$value->content}}</th>
 						<th>{{$value->status}}</th>
 						<th>{{$value->screen}}</th>
 						<th>{{$value->camera}}</th>

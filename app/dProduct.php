@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class dProduct extends Model
 {
-	protected $table = "product";
+    public $timestamps = false;
+    protected $table = "product";
     public function groupproduct()
     {
     	return $this->belongsTo('App\dGroupProduct','id_group_product','id');

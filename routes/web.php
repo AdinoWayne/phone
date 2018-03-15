@@ -51,6 +51,9 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::post('add','productController@postAdd');
 		Route::get('delete/{id}','productController@getDelete');
 	});
+	Route::group(['prefix'=>'Ajax'],function(){
+		Route::get('groupproduct/{id_brand}','AjaxController@getGProduct');
+	});
 	Route::group(['prefix' => 'news'], function() {
 		Route::get('list','newsController@getList');
 		Route::get('edit/{id}','newsController@getEdit');

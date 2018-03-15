@@ -31,17 +31,18 @@
 
     <div id="wrapper">
 
-    @include('admin.layout.header')
-    <!-- Page Content -->
-    @yield('content')
-    <!-- /#page-wrapper -->
+        @include('admin.layout.header')
+        <!-- Page Content -->
+        @yield('content')
+        <!-- /#page-wrapper -->
 
     </div>
     <!-- /#wrapper -->
 
     <!-- jQuery -->
     <script src="admin_assets/bower_components/jquery/dist/jquery.min.js"></script>
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="admin_assets/js/jquery.shorten.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="admin_assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
@@ -57,11 +58,20 @@
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
                 responsive: true
+            });
         });
-    });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".comment").shorten({
+                "showChars" : 70,
+                "moreText"  : "Xem thêm",
+                "lessText"  : "Rút gọn",
+            });
+        });
     </script>
     <script type="text/javascript" language="javascript" src="admin_assets/ckeditor/ckeditor.js" ></script>
     @yield('script')
