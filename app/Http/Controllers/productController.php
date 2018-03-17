@@ -65,4 +65,55 @@ class productController extends Controller
 		$image->save();
 		return redirect('admin/product/add')->with('Thongbao','Thêm thành công');
 	}
+	public function getEdit($id){
+		$current = dProduct::find($id);
+		return view('admin.product.edit',['product'=>$current]);
+	}
+	public function postEdit(Request $request,$id){
+		$this->validate($request,
+			[
+				'txtName' =>'required|min:3|max:100',
+			],
+			[
+				'txtName.required' =>'Bạn chưa nhập tên',
+				'txtName.min' =>'Tên quá ít kí tự',
+				'txtName.max' =>'Tên quá dài',
+			]);
+		$current = dProduct::find($id);
+		$current->name = $request->txtName;
+		$current->price =$request->txtPrice;
+		$current->content =$request->txtContent;
+		$current->status =$request->txtStatus;   
+		$current->version =$request->txtVersion;
+		$current->screen =$request->txtScreen;
+		$current->camera =$request->txtCamera;
+		$current->body =$request->txtBody;
+		$current->ram =$request->txtRam;
+		$current->storage =$request->txtStorage;
+		$current->os =$request->txtOS;
+		$current->chipset =$request->txtChipset;
+		$current->cpu =$request->txtCPU;
+		$current->size =$request->txtSize;
+		$current->screenresolution =$request->txtScreenresolution;
+		$current->displaytype =$request->txtDisplaytype;
+		$current->fcarema =$request->txtFcarema;
+		$current->rcarema =$request->txtRcarema;
+		$current->wirelesstechnology =$request->txtWirelesstechnology;
+		$current->power =$request->txtPower;
+		$current->sim =$request->txtSim;
+		$current->Bluetooth =$request->txtBluetooth;
+		$current->usb =$request->txtUsb;
+		$current->more =$request->txtMore;
+		$current->save();
+		return redirect('admin/product/list')->with('Thongbao','Sửa thành công');
+	}
+	public function getDelete($id){
+		$current = dProduct::find($id);
+		$image =dProduct::with('image')->find($id)->image;
+		foreach ($image as $key => $value) {
+			$value->delete();
+		}
+		$current->delete();	
+		return redirect('admin/product/list')->with('Thongbao','Sửa thành công');
+	}
 }
