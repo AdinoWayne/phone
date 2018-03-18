@@ -40,11 +40,11 @@
                             @endforeach
                         </div>
                         @endif
-                        @if(session('thongbao'))
-                        <div class="alert alert-success">{{session('thongbao')}}
+                        @if(session('Thongbao'))
+                        <div class="alert alert-success">{{session('Thongbao')}}
                         </div>
                         @endif
-                        <form role="form" action="" method="POST">
+                        <form role="form" action="admin/login" method="POST">
                             <fieldset>
                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">

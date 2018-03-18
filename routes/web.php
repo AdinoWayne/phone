@@ -14,11 +14,7 @@
 Route::get('/', function () {
 	return view('welcome');
 });
-use App\dSlide;
-Route::get('test',function(){
-	return view('admin.slide.list');
-});
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 	Route::group(['prefix' => 'slide'], function() {
 		Route::get('list','slideController@getList');
 		Route::get('edit/{id}','slideController@getEdit');
@@ -69,6 +65,9 @@ Route::group(['prefix' => 'admin'], function() {
 		Route::get('add','userController@getAdd');
 		Route::post('add','userController@postAdd');
 		Route::get('delete/{id}','userController@getDelete');
+		Route::get('yoursuser/{id}','userController@getyoursuser');
+		Route::get('password/{id}','userController@getpassword');
+		Route::post('password/{id}','userController@postpassword');
 	});
 });
 Route::get('admin/login','userController@getLogin');
