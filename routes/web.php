@@ -58,6 +58,24 @@ Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 		Route::post('add','newsController@postAdd');
 		Route::get('delete/{id}','newsController@getDelete');
 	});
+	Route::group(['prefix' => 'productcolor'], function() {
+		Route::get('list','productcolorController@getList');
+		Route::get('edit/{id}','productcolorController@getEdit');
+		Route::post('edit/{id}','productcolorController@postEdit');
+		Route::get('add','productcolorController@getAdd');
+		Route::post('add','productcolorController@postAdd');
+		Route::get('delete/{id}','productcolorController@getDelete');
+	});
+	Route::group(['prefix' => 'order'], function() {
+		Route::get('list','orderController@getList');
+		Route::get('edit/{id}','orderController@getEdit');
+		Route::post('edit/{id}','orderController@postEdit');
+		Route::get('detail/{id}','orderController@getDetail');
+		Route::post('detail/{id}','orderController@postDetail');
+		Route::get('add','orderController@getAdd');
+		Route::post('add','orderController@postAdd');
+		Route::get('delete/{id}','orderController@getDelete');
+	});
 	Route::group(['prefix' => 'user'], function() {
 		Route::get('list','userController@getList');
 		Route::get('edit/{id}','userController@getEdit');

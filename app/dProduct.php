@@ -26,10 +26,13 @@ class dProduct extends Model
     }
     public function color()
     {
-    	return $this->belongsToMany('App\dProduct','App\dProductColor','id_product','id_color');
+    	return $this->belongsToMany('App\dColors','Product_Color','id_product','id_color');
     }
     public function image()
     {
     	return $this->hasMany('App\dImage','id_product','id');
+    }
+    public function productcolor(){
+        return $this->hasMany('App\dProductColor','id_product','id');
     }
 }
