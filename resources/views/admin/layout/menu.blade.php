@@ -88,29 +88,41 @@
         <!-- /.nav-second-level -->
       </li>
       <li>
-        <a href="#"><i class="fa fa-cube fa-fw"></i>Order<span class="fa arrow"></span></a>
+        <a href="#"><i class="fa fa-cube fa-fw"></i>phone Image<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
          <li>
-          <a href="admin/order/list">List Order</a>
+          <a href="admin/image/list">List ImageOfPhone</a>
         </li>
         <li>
-          <a href="admin/order/add">Add Order</a>
+          <a href="admin/image/add">Add ImageOfPhone</a>
         </li>
       </ul>
       <!-- /.nav-second-level -->
     </li>
     <li>
-      <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
+      <a href="#"><i class="fa fa-cube fa-fw"></i>Order<span class="fa arrow"></span></a>
       <ul class="nav nav-second-level">
        <li>
-        <a href="admin/user/list">List User</a>
+        <a href="admin/order/list">List Order</a>
       </li>
       <li>
-        <a href="admin/user/add">Add User</a>
+        <a href="admin/order/add">Add Order</a>
       </li>
     </ul>
     <!-- /.nav-second-level -->
   </li>
+  <li>
+    <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
+    <ul class="nav nav-second-level">
+     <li>
+      <a href="admin/user/list">List User</a>
+    </li>
+    <li>
+      <a href="admin/user/add">Add User</a>
+    </li>
+  </ul>
+  <!-- /.nav-second-level -->
+</li>
 </ul>
 </div>
 <!-- /.sidebar-collapse -->

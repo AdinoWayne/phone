@@ -11,5 +11,10 @@ class newsController extends Controller
 		return view('admin.news.list',['list'=>$list]);
 	}
 	public function getAdd(){
+		return view('admin.news.add');
+	}
+	public function getEdit($id){
+		$current = dNews::find($id);
+		return view('admin.news.edit',['news'=>$current]);
 	}
 }

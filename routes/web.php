@@ -39,6 +39,14 @@ Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 		Route::post('add','groupproductController@postAdd');
 		Route::get('delete/{id}','groupproductController@getDelete');
 	});
+	Route::group(['prefix' => 'image'], function() {
+		Route::get('list','imageController@getList');
+		Route::get('edit/{id}','imageController@getEdit');
+		Route::post('edit/{id}','imageController@postEdit');
+		Route::get('add','imageController@getAdd');
+		Route::post('add','imageController@postAdd');
+		Route::get('delete/{id}','imageController@getDelete');
+	});
 	Route::group(['prefix' => 'product'], function() {
 		Route::get('list','productController@getList');
 		Route::get('edit/{id}','productController@getEdit');
