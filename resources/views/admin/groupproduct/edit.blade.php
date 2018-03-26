@@ -22,7 +22,7 @@
 				<div class="alert alert-success">{{session('Thongbao')}}
 				</div>
 				@endif
-				<form action="admin/groupproduct/edit/{{$grproduct->id}}" method="POST">s
+				<form action="admin/groupproduct/edit/{{$grproduct->id}}" method="POST">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group">
 						<label>GroupPhone Parent</label>

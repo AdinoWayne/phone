@@ -21,6 +21,7 @@
 						<th>Summary</th>
 						<th>Author</th>
 						<th>Content</th>
+						<th>DateCreated</th>
 						<th>Delete</th>
 						<th>Edit</th>
 					</tr>
@@ -32,9 +33,10 @@
 						<td>{{$value->name}}</td>
 						<td>{{$value->summary}}</td>
 						<td>{{$value->user->fullname}}</td>
-						<td>{{$value->content}}</td>
-						<td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/groupproduct/delete/{{$value->id}}"> Delete</a></td>
-						<td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/groupproduct/edit/{{$value->id}}">Edit</a></td>
+						<td class="comment">{{$value->content}}</td>
+						<td>{{$value->created_at}}</td>
+						<td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/news/delete/{{$value->id}}"> Delete</a></td>
+						<td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/news/edit/{{$value->id}}">Edit</a></td>
 					</tr>
 					@endforeach
 				</tbody>

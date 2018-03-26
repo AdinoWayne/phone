@@ -20,7 +20,7 @@ class slideController extends Controller
     public function getDelete($id){
         $current = dSlide::find($id);
         $current->delete();
-        return redirect('admin/slide/list');
+        return redirect('admin/slide/list')->with('Thongbao','Remove thành công');
     }
     public function postAdd(Request $request){
         $this->validate($request,
@@ -48,7 +48,7 @@ class slideController extends Controller
             $current->image ="";
         }
         $current->save();
-        return redirect('admin/slide/add')->with('thongbao','Thêm thành công');
+        return redirect('admin/slide/add')->with('Thongbao','Thêm thành công');
     }
     public function postEdit(Request $request,$id){
         $this->validate($request,

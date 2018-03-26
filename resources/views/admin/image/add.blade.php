@@ -22,7 +22,7 @@
 				<div class="alert alert-success">{{session('Thongbao')}}
 				</div>
 				@endif
-				<form action="admin/slide/add" method="POST" enctype="multipart/form-data">
+				<form action="" method="POST" enctype="multipart/form-data">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group">
 						<label>Phone Name</label>
