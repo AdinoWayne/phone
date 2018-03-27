@@ -7,14 +7,15 @@ orderController :    public function getDetail($id){
     }
     detail.blade :{{$total[0]}}
     css : position:absolute;
-   brandController : public function getDelete($id){
+   brandController :     public function getDelete($id){
         $current = dBrand::find($id);
         try{
             $current->delete();
+            die('catched you');
             return redirect('admin/brand/list');
         }
-        catch(Illuminate\Database\QueryException $err)
+        catch(\Illuminate\Database\QueryException $err)
         {
-            return redirect('admin/brand/list')->with('Thongbao','Delete Failed');
+            return redirect('admin/brand/list')->with('Thongbao','You have to delete table son');
         }
     }
