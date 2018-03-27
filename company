@@ -7,3 +7,14 @@ orderController :    public function getDetail($id){
     }
     detail.blade :{{$total[0]}}
     css : position:absolute;
+   brandController : public function getDelete($id){
+        $current = dBrand::find($id);
+        try{
+            $current->delete();
+            return redirect('admin/brand/list');
+        }
+        catch(Illuminate\Database\QueryException $err)
+        {
+            return redirect('admin/brand/list')->with('Thongbao','Delete Failed');
+        }
+    }
