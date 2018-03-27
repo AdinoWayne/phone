@@ -59,7 +59,7 @@
 					<td></td>
 					<td></td>
 					<td>Sub Total</td>
-					<td>Infinity War</td>
+					<td>{{$total[0]}}</td>
 				</tr>
 			</table>
 		</div>

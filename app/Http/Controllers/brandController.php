@@ -7,7 +7,7 @@ use App\dBrand;
 
 class brandController extends Controller
 {
-public function getList(){
+    public function getList(){
     	$brand =dBrand::all();
     	return view('admin.brand.list',['brand'=>$brand]);
     }
@@ -20,8 +20,15 @@ public function getList(){
     }
     public function getDelete($id){
         $current = dBrand::find($id);
-        $current->delete();
-        return redirect('admin/brand/list');
+        try{
+            $current->delete();
+            die('catched you');
+            return redirect('admin/brand/list');
+        }
+        catch(\Illuminate\Database\QueryException $err)
+        {
+            return redirect('admin/brand/list')->with('Thongbao','You have to delete table son');
+        }
     }
     public function postAdd(Request $request){
         $this->validate($request,

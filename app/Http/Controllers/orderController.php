@@ -13,10 +13,11 @@ class orderController extends Controller
     	$list =dOrders::orderBy('id','DESC')->get();
     	return view('admin.order.list',['list'=>$list]);
     }
-    public function getDetail($id){
-    	$order =dOrders::find($id);
-    	$index =1;
-    	$user =User::find($order->id_user);
-    	return view('admin.order.detail',['order'=>$order,'index'=>$index,'user'=>$user]);
+public function getDetail($id){
+        $order =dOrders::find($id);
+        $total =dOrderItem::selectRaw('SUM(qty*price) as total')->where('id_orders', $id)->groupBy('id_orders')->pluck('total');
+        $index =1;
+        $user =User::find($order->id_user);
+        return view('admin.order.detail',['order'=>$order,'index'=>$index,'user'=>$user,'total'=>$total]);
     }
 }
