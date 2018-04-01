@@ -27,23 +27,6 @@
 			</div>
 		</div>
 		@endforeach 
-{{-- 		<div id="htmlcaption2" class="nivo-html-caption slider-caption">
-			<div class="slider-progress"></div>
-			<div class="slider-text">
-				<div class="middle-text">
-					<div class="width-cap">
-						<h3 class="slider2-tiile-top top-ani-2"><span>Hand Cut and Crafted in soft Nenuine Leather</span></h3>
-						<h2 class="slider2-tiile-middle middle-ani-2"><span>Leather Bags</span></h2>
-						<div class="slider2-readmore">
-							<a href="#">explorer</a>
-						</div>	
-						<div class="slider2-shop">
-							<a href="#">Shopping Now</a>
-						</div>								
-					</div>
-				</div>
-			</div>					
-		</div> --}}
 	</div>
 	<!-- slider end -->
 </section>
@@ -100,242 +83,18 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<div class="product_list">
-					<div class="single_product">
-						<a href="product.html" target="main"><img src="pages_assets/img/feature-image/1.jpg" alt="" /></a>
-						<div class="product_details">
-							<h2>Lorem ipsum dolor</h2>
-							<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
-						</div>
-						<div class="product_detail">
-							<div class="star_icon">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-							</div>
-							<div class="product_button">
-								<div class="cart_details">
-									<a href="#" target="blank">Add to cart</a>
-								</div>
-								<div class="cart_details">
-									<a href="#" target="expand"><i class="fa fa-expand"></i></a>
-								</div>
-								<div class="cart_details">
-									<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="sale_product">
-							<h5>Sale</h5>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<div class="product_list">
-					<div class="single_product">
-						<a href="product.html" target="main"><img src="pages_assets/img/feature-image/4.jpg" alt="" /></a>
-						<div class="product_details">
-							<h2>Lorem ipsum dolor</h2>
-							<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
-						</div>
-						<div class="product_detail">
-							<div class="star_icon">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-							</div>
-							<div class="product_button">
-								<div class="cart_details">
-									<a href="#" target="blank">Add to cart</a>
-								</div>
-								<div class="cart_details">
-									<a href="#" target="expand"><i class="fa fa-expand"></i></a>
-								</div>
-								<div class="cart_details">
-									<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<div class="product_list">
-					<div class="single_product">
-						<a href="product.html" target="main"><img src="pages_assets/img/feature-image/6_1.jpg" alt="" /></a>
-						<div class="product_details">
-							<h2>Lorem ipsum dolor</h2>
-							<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
-						</div>
-						<div class="product_detail">
-							<div class="star_icon">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-							</div>
-							<div class="product_button">
-								<div class="cart_details">
-									<a href="#" target="blank">Add to cart</a>
-								</div>
-								<div class="cart_details">
-									<a href="#" target="expand"><i class="fa fa-expand"></i></a>
-								</div>
-								<div class="cart_details">
-									<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<div class="product_list">
-					<div class="single_product">
-						<a href="product.html" target="main"><img src="pages_assets/img/feature-image/8.jpg" alt="" /></a>
-						<div class="product_details">
-							<h2>Lorem ipsum dolor</h2>
-							<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
-						</div>
-						<div class="product_detail">
-							<div class="star_icon">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star-half-o"></i>
-							</div>
-							<div class="product_button">
-								<div class="cart_details">
-									<a href="#" target="blank">Add to cart</a>
-								</div>
-								<div class="cart_details">
-									<a href="#" target="expand"><i class="fa fa-expand"></i></a>
-								</div>
-								<div class="cart_details">
-									<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="sale_product">
-							<h5>Sale</h5>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
+			@foreach($product as $items)
 			<div class="product_bottom_area">
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 					<div class="product_list">
 						<div class="single_product">
-							<a href="product.html" target="main"><img src="pages_assets/img/feature-image/23.jpg" alt="" /></a>
+							<a href="product.html" target="main"><img src="upload/product/@foreach($items->image as $img)
+								{{$img->image}}
+								@break
+								@endforeach" alt=""/></a>
 							<div class="product_details">
-								<h2>Lorem ipsum dolor</h2>
-								<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
-							</div>
-							<div class="product_detail">
-								<div class="star_icon">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-half-o"></i>
-								</div>
-								<div class="product_button">
-									<div class="cart_details">
-										<a href="#" target="blank">Add to cart</a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="expand"><i class="fa fa-expand"></i></a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="sale_product">
-								<h5>Sale</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="product_list">
-						<div class="single_product">
-							<a href="product.html" target="main"><img src="pages_assets/img/feature-image/24.jpg" alt="" /></a>
-							<div class="product_details">
-								<h2>Lorem ipsum dolor</h2>
-								<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
-							</div>
-							<div class="product_detail">
-								<div class="star_icon">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-half-o"></i>
-								</div>
-								<div class="product_button">
-									<div class="cart_details">
-										<a href="#" target="blank">Add to cart</a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="expand"><i class="fa fa-expand"></i></a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="product_list">
-						<div class="single_product">
-							<a href="product.html" target="main"><img src="pages_assets/img/feature-image/10.jpg" alt="" /></a>
-							<div class="product_details">
-								<h2>Lorem ipsum dolor</h2>
-								<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
-							</div>
-							<div class="product_detail">
-								<div class="star_icon">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-half-o"></i>
-								</div>
-								<div class="product_button">
-									<div class="cart_details">
-										<a href="#" target="blank">Add to cart</a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="expand"><i class="fa fa-expand"></i></a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="product_list">
-						<div class="single_product">
-							<a href="product.html" target="main"><img src="pages_assets/img/feature-image/11_1.jpg" alt="" /></a>
-							<div class="product_details">
-								<h2>Lorem ipsum dolor</h2>
-								<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
+								<h2>{{$items->name}}</h2>
+								<p><span class="regular_price">{{$items->price+1}}đ</span> <span class="popular_price">{{$items->price}}đ</span></p>
 							</div>
 							<div class="product_detail">
 								<div class="star_icon">
@@ -364,140 +123,9 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="product_bottom_area">
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="product_list">
-						<div class="single_product">
-							<a href="product.html" target="main"><img src="pages_assets/img/feature-image/14_3.jpg" alt="" /></a>
-							<div class="product_details">
-								<h2>Lorem ipsum dolor</h2>
-								<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
-							</div>
-							<div class="product_detail">
-								<div class="star_icon">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-half-o"></i>
-								</div>
-								<div class="product_button">
-									<div class="cart_details">
-										<a href="#" target="blank">Add to cart</a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="expand"><i class="fa fa-expand"></i></a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="sale_product">
-								<h5>Sale</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="product_list">
-						<div class="single_product">
-							<a href="product.html" target="main"><img src="pages_assets/img/feature-image/16.jpg" alt="" /></a>
-							<div class="product_details">
-								<h2>Lorem ipsum dolor</h2>
-								<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
-							</div>
-							<div class="product_detail">
-								<div class="star_icon">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-half-o"></i>
-								</div>
-								<div class="product_button">
-									<div class="cart_details">
-										<a href="#" target="blank">Add to cart</a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="expand"><i class="fa fa-expand"></i></a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="product_list">
-						<div class="single_product">
-							<a href="product.html" target="main"><img src="pages_assets/img/feature-image/17_2_1_1.jpg" alt="" /></a>
-							<div class="product_details">
-								<h2>Lorem ipsum dolor</h2>
-								<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
-							</div>
-							<div class="product_detail">
-								<div class="star_icon">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-half-o"></i>
-								</div>
-								<div class="product_button">
-									<div class="cart_details">
-										<a href="#" target="blank">Add to cart</a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="expand"><i class="fa fa-expand"></i></a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="product_list">
-						<div class="single_product">
-							<a href="product.html" target="main"><img src="pages_assets/img/feature-image/11_1.jpg" alt="" /></a>
-							<div class="product_details">
-								<h2>Lorem ipsum dolor</h2>
-								<p><span class="regular_price">$170.00</span> <span class="popular_price">$150.00</span></p>
-							</div>
-							<div class="product_detail">
-								<div class="star_icon">
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-half-o"></i>
-								</div>
-								<div class="product_button">
-									<div class="cart_details">
-										<a href="#" target="blank">Add to cart</a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="expand"><i class="fa fa-expand"></i></a>
-									</div>
-									<div class="cart_details">
-										<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="sale_product">
-								<h5>Sale</h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<?php $index++; ?>
+    		@if($index % 4 == 0) </div><div class="row">@endif
+			@endforeach
 		</div>
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -648,12 +276,12 @@
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 				<div class="service_list">
-					<h2><i class="fa fa-envelope-o"></i> info@liendobingo.com</h2>
+					<h2><i class="fa fa-envelope-o"></i> gnurt10@gmail.com</h2>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 				<div class="service_list">
-					<h3><i class="fa fa-phone"></i> (+5555) 224 434</h3>
+					<h3><i class="fa fa-phone"></i>(+84)987 896 241</h3>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
