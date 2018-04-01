@@ -99,3 +99,7 @@ Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 Route::get('admin/login','userController@getLogin');
 Route::post('admin/login','userController@postLogin');
 Route::get('admin/logout','userController@getlogout');
+
+
+// page home display customer
+Route::get('page/home','homeController@getHome');
