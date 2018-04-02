@@ -175,13 +175,14 @@
 		</div>
 		<div class="row">
 			<div class="carousel_blog_list">
+				@foreach($blog as $value)
 				<div class="col-lg-3">
 					<div class="single_blog">
-						<a href="#"><img src="pages_assets/img/blog-post-image/cl-1.jpg" alt="" /></a>
+						<a href="#"><img src="upload/blog/{{$value->image}}" alt="" /></a>
 						<div class="blog_details">
-							<a href="#">William Eto</a>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...</p>
-							<h3>18 Aug 2015</h3>
+							<a href="#">{{$value->name}}</a>
+							<p>{{$value->summary}}...</p>
+							<h3>{{$value->created_at}}</h3>
 							<a href="#">
 								<div class="read_more">
 									<i class="fa fa-angle-right"></i>
@@ -190,81 +191,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-3">
-					<div class="single_blog">
-						<a href="#"><img src="pages_assets/img/blog-post-image/cl-2.jpg" alt="" /></a>
-						<div class="blog_details">
-							<a href="#">William Eto</a>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...</p>
-							<h3>18 Aug 2015</h3>
-							<a href="#">
-								<div class="read_more">
-									<i class="fa fa-angle-right"></i>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="single_blog">
-						<a href="#"><img src="pages_assets/img/blog-post-image/cl-3.jpg" alt="" /></a>
-						<div class="blog_details">
-							<a href="#">William Eto</a>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...</p>
-							<h3>18 Aug 2015</h3>
-							<a href="#">
-								<div class="read_more">
-									<i class="fa fa-angle-right"></i>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="single_blog">
-						<a href="#"><img src="pages_assets/img/blog-post-image/cl-4.jpg" alt="" /></a>
-						<div class="blog_details">
-							<a href="#">William Eto</a>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...</p>
-							<h3>18 Aug 2015</h3>
-							<a href="#">
-								<div class="read_more">
-									<i class="fa fa-angle-right"></i>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="single_blog">
-						<a href="#"><img src="pages_assets/img/blog-post-image/cl-3.jpg" alt="" /></a>
-						<div class="blog_details">
-							<a href="#">William Eto</a>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...</p>
-							<h3>18 Aug 2015</h3>
-							<a href="#">
-								<div class="read_more">
-									<i class="fa fa-angle-right"></i>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3">
-					<div class="single_blog">
-						<a href="#"><img src="pages_assets/img/blog-post-image/cl-1.jpg" alt="" /></a>
-						<div class="blog_details">
-							<a href="#">William Eto</a>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam...</p>
-							<h3>18 Aug 2015</h3>
-							<a href="#">
-								<div class="read_more">
-									<i class="fa fa-angle-right"></i>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
+				@endforeach
 			</div>
 		</div>
 	</div>
