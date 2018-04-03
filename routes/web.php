@@ -104,3 +104,4 @@ Route::get('admin/logout','userController@getlogout');
 // page home display customer
 Route::get('page/home','homeController@getHome');
 Route::get('page/category/{id}','homeController@getCate');
+Route::get('page/detail/{id}','homeController@getDetail');

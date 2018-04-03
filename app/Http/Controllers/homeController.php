@@ -7,6 +7,7 @@ use App\dSlide;
 use App\dProduct;
 use App\dNews;
 use App\dBrand;
+use App\dImage;
 use App\dGroupProduct;
 class homeController extends Controller
 {
@@ -22,10 +23,16 @@ class homeController extends Controller
     }
     public function getCate($id)
     {
-    	$gp =dBrand::find($id);
-    	// $product =dProduct::where('id_groupp_roduct',$gp->id);
-    	// ->paginate(12);
-    	$index =0;
-    	return view('pages.category',['gp'=>$gp,'index'=>$index]);
+        $product =dProduct::select('product.id','product.name','product.price','product.content')->join('group_product','id_group_product','group_product.id')->join('brand','group_product.id_brand','brand.id')->where('brand.id',$id)->paginate(9);
+        $index =0;
+        return view('pages.category',['index'=>$index,'pro'=>$product]);
+    }
+    public function getDetail($id)
+    {
+        $product =dProduct::find($id);
+        $gp =dGroupProduct::where('id',$product->id_group_product)->get()->first();
+        $brand =dBrand::where('id',$gp->id_brand)->get()->first();
+        $index =1;
+        return view('pages.detail',['product'=>$product,'index'=>$index,'brand'=>$brand]);
     }
 }
