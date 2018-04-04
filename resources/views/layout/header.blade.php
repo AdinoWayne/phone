@@ -16,7 +16,7 @@
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 						<!--Start Logo area -->
 						<div class="logo"> 
-							<a href="index.html">
+							<a href="page/home">
 								<img src="pages_assets/img/logo/logo.png" alt="" />
 							</a>
 						</div> 
@@ -26,15 +26,12 @@
 						<!--Start Header Right Cart area -->
 						<div class="account_card_area"> 
 							<ul id="account_nav">
-								<li><a href="#"><i class="fa fa-key"></i>Account</a>
+								@if(Auth::check())
+								<li><a href="#"><i class="fa fa-key"></i>{{Auth::user()->fullname}}</a>
+									@else
+									<li><a href="#"><i class="fa fa-key"></i>Account</a>
+										@endif
 									<div class="account_menu_list">
-										<div class="account_single_item">
-											<h2>Currency</h2>
-											<ul id="account_single_nav_1">
-												<li><a href="#">Euro</a></li>
-												<li><a href="#">US Dollor</a></li>
-											</ul>
-										</div>
 										<div class="account_single_item">
 											<h2>Language</h2>
 											<ul id="account_single_nav_2">
@@ -50,9 +47,11 @@
 												<li><a href="#">My Wishlist</a></li>
 												<li><a href="#">My Cart</a></li>
 												<li><a href="#">Checkout</a></li>
-												<li><a href="#">Testimonial</a></li>
-												<li><a href="#">Blog</a></li>
-												<li><a href="#">Log In</a></li>
+												@if(Auth::check())
+												<li><a href="page/logout">Log Out</a></li>
+												@else
+												<li><a href="page/login">Log In</a></li>
+												@endif
 											</ul>
 										</div>
 									</div>

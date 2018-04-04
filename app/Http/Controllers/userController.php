@@ -55,8 +55,14 @@ class userController extends Controller
 			$current->avatar ="";
 		}  
 		$current->password =bcrypt($request->txtpassword);
-		$current->save();
-		return redirect('admin/user/add')->with('Thongbao','Thêm thành công');
+		try{
+			$current->save();
+			return redirect('admin/user/add')->with('Thongbao','Thêm thành công');
+		}
+		catch(\Illuminate\Database\QueryException $err)
+		{
+			return redirect('admin/user/list')->with('Thongbao','Server Bussy');
+		}
 	}
 	public function postEdit(Request $request,$id){
 		$current =User::find($id);

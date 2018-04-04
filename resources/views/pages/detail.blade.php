@@ -1,4 +1,5 @@
 @extends('layout.index')
+@section('title','Detail')
 @section('content')
 <div class="breadcrumbs_area">
 	<div class="container">
@@ -259,10 +260,16 @@
 									@endforeach
 									<a href="#" class="button home-green"><i class="icons icon-spinner"></i> Refresh comments list</a>
 									<a href="#" class="button orange"><i class="icons icon-rss"></i> RSS feed for comments to this post</a>
-									<textarea class="form-control" rows="3"></textarea>
-									<div class="add-to-cart">
-										<button type="button" class="cart_button"><span>Comment</span></button>
-									</div>
+									@if(Auth::check())
+									<form method="POST" action="comment/{{$product->id}}">
+										{!! csrf_field() !!}
+										<textarea class="form-control" rows="3" name="noidung"></textarea>
+										<div class="add-to-cart">
+											<button type="submit" class="cart_button"><span>Comment</span></button>
+										</div>	
+									</form>
+
+									@endif
 								</ul>
 							</div>
 						</div>

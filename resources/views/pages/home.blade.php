@@ -1,4 +1,5 @@
 @extends('layout.index')
+@section('title','Home')
 @section('content')
 <section class="slider-area">
 	<!-- slider start -->

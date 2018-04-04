@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\dSlide;
 use App\dProduct;
@@ -9,6 +9,7 @@ use App\dNews;
 use App\dBrand;
 use App\dImage;
 use App\dGroupProduct;
+use App\User;
 class homeController extends Controller
 {
     public function getHome()
@@ -34,5 +35,79 @@ class homeController extends Controller
         $brand =dBrand::where('id',$gp->id_brand)->get()->first();
         $index =1;
         return view('pages.detail',['product'=>$product,'index'=>$index,'brand'=>$brand]);
+    }
+    public function getLogin()
+    {
+        return view('pages.login');
+    }
+    public function postLogin(Request $request)
+    {
+        $this->validate($request,
+            [
+                'email' => 'required|email',
+                'password' =>'required',
+            ],
+            [
+                'email.required' =>'Bạn chưa nhập email',
+                'email.email' =>'Email dont true type',
+                'password.required' =>'Bạn chưa nhập password',
+            ]);
+        if (Auth::attempt(['email'=>$request->email,'password'=>$request->password])) {
+            return redirect('page/home');
+        }else{
+            return redirect('page/login')->with('Thongbao','login fail');
+        }
+    }
+    public function getlogout()
+    {
+        Auth::logout();
+        return redirect('page/home');
+    }
+    public function getRegister()
+    {
+        return view('pages.register');
+    }
+    public function postRegister(Request $request)
+    {
+        $this->validate($request,
+            [
+                'txtemail' => 'required|email',
+                'txtpassword' =>'required',
+                'txtpassword1' =>'required|same:txtpassword'
+            ],
+            [
+                'txtemail.required' =>'Bạn chưa nhập email',
+                'txtemail.email' =>'Email dont true type',
+                'txtpassword.required' =>'Bạn chưa nhập password',
+                'txtpassword1.required' =>'Bạn chưa nhập password',
+                'txtpassword1.same' =>'input pass dont true'
+            ]);
+        $current = new User;
+        $current->fullname = $request->txtname;
+        $current->email =$request->txtemail;
+        $current->phone =$request->txtphone;  
+        $current->address =$request->txtaddress;  
+        $current->role ="customer"; 
+        if($request->hasFile('txtHinh')){
+            $file =$request->file('txtHinh');
+            $name =$file->getClientOriginalName();
+            $hinh =str_random(4)."_".$name;
+            while (file_exists("upload/user/".$hinh)) {
+                $hinh =str_random(4)."_".$name;
+            }
+            $file->move("upload/user",$hinh);
+            $current->avatar =$hinh;
+        }else{
+            $current->avatar ="";
+        }  
+        $current->password =bcrypt($request->txtpassword);
+        try{
+            $current->save();
+            return redirect('page/home');
+        }
+        catch(\Illuminate\Database\QueryException $err)
+        {
+            return redirect('page/register')->with('Thongbao','Try Again');
+        }
     }
 }

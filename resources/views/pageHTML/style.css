@@ -1349,10 +1349,12 @@ ul.register_form li span{
 }
 .email_address .email_test{
 	background: #f0f0f0;
+	width:100%;
 	padding: 9px 10px;
 }
 .email_address .password{
 	background: #f0f0f0;
+	width:100%;
 	padding: 9px 10px;
 }
 /*----------------------------------------*/

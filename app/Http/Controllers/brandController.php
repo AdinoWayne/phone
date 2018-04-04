@@ -22,7 +22,6 @@ class brandController extends Controller
         $current = dBrand::find($id);
         try{
             $current->delete();
-            die('catched you');
             return redirect('admin/brand/list');
         }
         catch(\Illuminate\Database\QueryException $err)

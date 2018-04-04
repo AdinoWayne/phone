@@ -181,7 +181,7 @@ input[type="text"] {
 	right:0;
 	background:#fff;
 	z-index:999;
-	width:400px;
+	width:120px;
 	border-top: 1px solid #eee;
 	box-shadow: 0 2px 3px rgba(0,0,0,0.3);
 	opacity:0;
@@ -1349,10 +1349,12 @@ ul.register_form li span{
 }
 .email_address .email_test{
 	background: #f0f0f0;
+	width:100%;
 	padding: 9px 10px;
 }
 .email_address .password{
 	background: #f0f0f0;
+	width:100%;
 	padding: 9px 10px;
 }
 /*----------------------------------------*/
@@ -3819,4 +3821,7 @@ a.add-tag-btn {
 }
 .button-right {
   float: right;
+}
+.comments{
+	list-style-type:none;
 }
