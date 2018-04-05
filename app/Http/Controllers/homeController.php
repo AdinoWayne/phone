@@ -110,4 +110,12 @@ class homeController extends Controller
             return redirect('page/register')->with('Thongbao','Try Again');
         }
     }
+    public function postSearch(Request $request)
+    {
+        $keyword =$request->Name;
+        $product = dProduct::where('name','like',"%$keyword%")->paginate(9);
+        $index =0;
+        return view('pages.category',['index'=>$index,'pro'=>$product]);
+
+    }
 }

@@ -111,3 +111,5 @@ Route::get('page/logout','homeController@getlogout');
 Route::post('comment/{id}','commentController@postcmt');
 Route::get('page/register','homeController@getRegister');
 Route::post('page/register','homeController@postRegister');
+//search
+Route::post('page/search','homeController@postSearch');
