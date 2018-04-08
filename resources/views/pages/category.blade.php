@@ -195,7 +195,7 @@
 								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 									<div class="product_list">
 										<div class="single_product repomsive_768">
-											<a href="product.html" target="main"><img src="upload/product/@foreach($items->image as $img)
+											<a href="page/detail/{{$items->id}}" target="main"><img src="upload/product/@foreach($items->image as $img)
 												{{$img->image}}
 												@break
 												@endforeach" alt=""/></a>

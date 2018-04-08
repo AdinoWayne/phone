@@ -89,7 +89,7 @@
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 					<div class="product_list">
 						<div class="single_product">
-							<a href="product.html" target="main"><img src="upload/product/@foreach($items->image as $img)
+							<a href="page/detail/{{$items->id}}" target="main"><img src="upload/product/@foreach($items->image as $img)
 								{{$img->image}}
 								@break
 								@endforeach" alt=""/></a>

@@ -97,11 +97,11 @@
 									</div>
 								</li>
 								@foreach($menu as $value)
-								<li><a href="shop.html"><span class="Clothings">{{$value->name}}</span></a>
+								<li><a href="page/category/{{$value->id}}"><span class="Clothings">{{$value->name}}</span></a>
 									<div class="home_mega_menu">
 										@foreach($value->groupproduct as $sonvalue)
 										<div class="single_megamenu">
-											<h2><a href="shop.html">{{$sonvalue->name}}</a></h2>
+											<h2><a href="">{{$sonvalue->name}}</a></h2>
 										</div>
 										@endforeach
 									</div>
