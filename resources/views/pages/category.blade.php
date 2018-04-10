@@ -299,5 +299,4 @@
 				</div>
 			</div>
 		</div>
-		<!--End clothing product area -->
 		@endsection

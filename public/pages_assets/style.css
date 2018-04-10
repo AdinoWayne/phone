@@ -70,6 +70,74 @@ Version: 1.0
 /*----------------------------------------*/
 /*  2.  Global CSS
 /*----------------------------------------*/
+/* Product Color */
+.product-color {
+  margin-bottom: 30px;
+}
+  
+.color-choose div {
+  display: inline-block;
+}
+  
+.color-choose input[type="radio"] {
+  display: none;
+}
+  
+.color-choose input[type="radio"] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+  
+.color-choose input[type="radio"] + label span {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+}
+  
+.color-choose input[type="radio"]#red + label span {
+  background-color: #C91524;
+}
+.color-choose input[type="radio"]#blue-coral + label span {
+  background-color: #314780;
+}
+.color-choose input[type="radio"]#black + label span {
+  background-color: #323232;
+}
+.color-choose input[type="radio"]#gold + label span {
+  background-color: #ffff00;
+}
+.color-choose input[type="radio"]#silver + label span {
+  background-color: #e8ddd0;
+}
+.color-choose input[type="radio"]#rose + label span {
+  background-color: #ea7979;
+}
+.color-choose input[type="radio"]#white + label span {
+  background-color: #ffffff;
+}
+.color-choose input[type="radio"]#Orchid-Grey + label span {
+  background-color: #bab1ae;
+}
+.color-choose input[type="radio"]#orange + label span {
+  background-color: #f95807;
+}
+.color-choose input[type="radio"]#Lilac-Purple + label span {
+  background-color: #d007f9;
+}
+
+.color-choose input[type="radio"]:checked + label span {
+  background-image: url(img/check-icn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.shopping-cart-table img { width: 100px;height: 100px; }
+.imgblog{ width: auto;height: 400px; }
 a{transition: all .3s linear;}
 .single_blog img, .blog_view_list .blog_single_carousel img, .conpany_product_details img, .upsell_product_list .single_upsell img{
 	width:100%;
@@ -2178,7 +2246,7 @@ table.cart_items th:nth-last-of-type(6){
 	padding:10px 150px;
 }
 table.cart_items td:nth-last-of-type(6){
-	padding:10px 150px;
+	padding:10px ;
 }
 table.cart_items td:nth-last-of-type(1){
 	font-weight:bold;
@@ -3093,7 +3161,7 @@ ul.pagination li.active:hover a{
 	padding:80px 0px;
 }
 .about_hope_image img{
-	width:100%;
+	width:438px;
 	height:auto;
 }
 .about_hope_text h1{

@@ -14,6 +14,7 @@
 Route::get('/', function () {
 	return view('welcome');
 });
+
 Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 	Route::group(['prefix' => 'slide'], function() {
 		Route::get('list','slideController@getList');
@@ -104,6 +105,7 @@ Route::get('admin/logout','userController@getlogout');
 // page home display customer
 Route::get('page/home','homeController@getHome');
 Route::get('page/category/{id}','homeController@getCate');
+Route::get('page/category1/{id}','homeController@getCate1');
 Route::get('page/detail/{id}','homeController@getDetail');
 Route::get('page/login','homeController@getLogin');
 Route::post('page/login','homeController@postLogin');
@@ -113,3 +115,20 @@ Route::get('page/register','homeController@getRegister');
 Route::post('page/register','homeController@postRegister');
 //search
 Route::post('page/search','homeController@postSearch');
+//wishlist
+Route::get('add-to-cart/{id}',['as'=>'ThemCart','uses'=>'homeController@getCart']);
+Route::get('del-cart/{id}',['as'=>'XoaCart','uses'=>'homeController@getDCart']);
+Route::get('page/wishlist',['as'=>'wishlist','uses'=>'homeController@getWishlist']);
+//blog
+Route::get('page/category-blog',['as'=>'cateblog','uses'=>'homeController@getCateblog']);
+Route::get('page/single-blog/{id}',['as'=>'singleblog','uses'=>'homeController@getSingleblog']);
+Route::get('page/contact',['as'=>'contact','uses'=>'homeController@getContact']);
+Route::get('page/user',['as'=>'user','uses'=>'homeController@getUser']);
+Route::post('changepw','AjaxController@postchangepw');
+Route::get('page/cart',['as'=>'cart','uses'=>'cartController@getCart']);
+
+
+Route::get('/ajax/test','homeController@lmore');
+Route::get('page/test','homeController@loadmore');
+
+

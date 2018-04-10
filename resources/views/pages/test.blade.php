@@ -2,56 +2,58 @@
 @section('title','Home')
 @section('content')
 <section class="slider-area">
-	<!-- slider start -->
-	<div class="slider">
-		<div id="mainSlider" class="nivoSlider nevo-slider">
-			@foreach($slide as $value)
-			<img src="upload/slide/{{$value->image}}" alt="main slider" title="#htmlcaption{{$value->id}}"/>
-			@endforeach
-		</div>
+<!-- slider start -->
+<div class="slider">
+	<div id="mainSlider" class="nivoSlider nevo-slider">
 		@foreach($slide as $value)
-		<div id="htmlcaption{{$value->id}}" class="nivo-html-caption slider-caption">
-			<div class="slider-progress"></div>
-			<div class="slider-text">
-				<div class="middle-text">
-					<div class="width-cap">
-						<h3 class="slider-tiile-top top-ani-1"><span>Buy Now</span></h3>
-						<h2 class="slider-tiile-middle middle-ani-1"><span>{{$value->name}}</span></h2>
-						<div class="slider-readmore">
-							<a href="#">explorer</a>
-						</div>
-						<div class="slider-shopping">
-							<a href="#">Shopping Now</a>
-						</div>
+		<img src="upload/slide/{{$value->image}}" alt="main slider" title="#htmlcaption{{$value->id}}"/>
+		@endforeach
+	</div>
+	<div class="infinite-scroll">
+	@foreach($slide as $value)
+	<div id="htmlcaption{{$value->id}}" class="nivo-html-caption slider-caption">
+		<div class="slider-progress"></div>
+		<div class="slider-text">
+			<div class="middle-text">
+				<div class="width-cap">
+					<h3 class="slider-tiile-top top-ani-1"><span>Buy Now</span></h3>
+					<h2 class="slider-tiile-middle middle-ani-1"><span>{{$value->name}}</span></h2>
+					<div class="slider-readmore">
+						<a href="#">explorer</a>
+					</div>
+					<div class="slider-shopping">
+						<a href="#">Shopping Now</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		@endforeach 
 	</div>
-	<!-- slider end -->
+	@endforeach 
+</div>
+</div>
+<!-- slider end -->
 </section>
 <!-- slider-area end -->
 <!--Start Feature area -->
 <div class="feature_area">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<div class="feature_text">
-					<h4>Featured</h4>
-				</div>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="feature_text">
+				<h4>Featured</h4>
 			</div>
 		</div>
-		<div class="row">
-			@foreach($product as $items)
-			<div class="product_bottom_area">
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div class="product_list">
-						<div class="single_product">
-							<a href="page/detail/{{$items->id}}" target="main"><img src="upload/product/@foreach($items->image as $img)
-								{{$img->image}}
-								@break
-								@endforeach" alt=""/></a>
+	</div>
+	<div class="row">
+		@foreach($product as $items)
+		<div class="product_bottom_area">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="product_list">
+					<div class="single_product">
+						<a href="page/detail/{{$items->id}}" target="main"><img src="upload/product/@foreach($items->image as $img)
+							{{$img->image}}
+							@break
+							@endforeach" alt=""/></a>
 							<div class="product_details">
 								<h2>{{$items->name}}</h2>
 								<p><span class="regular_price">{{$items->price+1}}đ</span> <span class="popular_price">{{$items->price}}đ</span></p>
@@ -84,13 +86,13 @@
 				</div>
 			</div>
 			<?php $index++; ?>
-    		@if($index % 4 == 0) </div><div class="row">@endif
+		@if($index % 4 == 0) </div><div class="row">@endif
 			@endforeach
 		</div>
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="more_feature_area">
-					<h2><a href="#">Load More...</a></h2>
+					{{$product->links()}}
 				</div>
 			</div>
 		</div>

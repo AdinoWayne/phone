@@ -10,6 +10,8 @@ use App\dBrand;
 use App\dImage;
 use App\dGroupProduct;
 use App\User;
+use App\Cart;
+use Session;
 class homeController extends Controller
 {
     public function getHome()
@@ -116,6 +118,70 @@ class homeController extends Controller
         $product = dProduct::where('name','like',"%$keyword%")->paginate(9);
         $index =0;
         return view('pages.category',['index'=>$index,'pro'=>$product]);
+    }
+    public function getCart(Request $request,$id)
+    {
+        $product = dProduct::find($id);
+        $oldcart = Session('cart')?Session::get('cart'):null;
+        $cart = new Cart($oldcart);
+        $cart->add($product,$id);
+        $request->session()->put('cart',$cart);
+        return redirect()->back();
+    }
+    public function getDCart($id)
+    {
+        $oldcart = Session('cart')?Session::get('cart'):null;
+        $cart = new Cart($oldcart);
+        $cart->removeItem($id);
+        Session::put('cart',$cart);
+        return redirect()->back();
+    }
+    public function getWishlist()
+    {
+        return view('pages.wishlist');
+    }
+    public function getCateblog()
+    {
+        $blog =dNews::paginate(3);
+        return view('pages.category-blog',['blog'=>$blog]);
+    }
+    public function getSingleblog($id)
+    {
+        $blog =dNews::find($id);
+        return view('pages.single-blog',['blog'=>$blog]);
+    }
+    public function getContact()
+    {
+        return view('pages.contact');
+    }
+    public function getUser()
+    {
+        if(Auth::check()){
+            $user = User::find(Auth::user()->id);
+            return view('pages.user')->with('user',$user);
+        }else{
+            return redirect('page/home');
+        }
 
+    }
+    public function loadmore()
+    {
+        $slide =dSlide::all();
+        $product =dProduct::paginate(12);
+        $blog =dNews::all();
+        $index =0;
+        return view('pages.test',['slide'=>$slide,'product'=>$product,'index'=>$index,'blog'=>$blog]);
+    }
+    public function lmore()
+    {
+        $product =dProduct::paginate(12);
+        die();
+        return view('pages.test',['product'=>$product])->render();
+    }
+    public function getCate1($id)
+    {
+        $product =dProduct::select('product.id','product.name','product.price','product.content')->join('group_product','id_group_product','group_product.id')->where('group_product.id',$id)->paginate(9);
+        $index =0;
+        return view('pages.category',['index'=>$index,'pro'=>$product]);
     }
 }
