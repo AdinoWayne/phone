@@ -66,7 +66,7 @@
 								</div>
 								<div class="product_button">
 									<div class="cart_details">
-										<a href="#" target="blank">Buy Now</a>
+										<a href="giohang/{{$items->id}}" target="blank">Buy Now</a>
 									</div>
 									<div class="cart_details">
 										<a href="page/detail/{{$items->id}}" target="expand"><i class="fa fa-expand"></i></a>

@@ -45,7 +45,6 @@
 												<h2>Setting</h2>
 												<ul id="account_single_nav_3">
 													<li><a href="{{route('user')}}">My Account</a></li>
-													<li><a href="{{route('cart')}}">My Cart</a></li>
 													@if(Auth::check())
 													<li><a href="page/logout">Log Out</a></li>
 													@else
@@ -55,9 +54,9 @@
 											</div>
 										</div>
 									</li>
-									<li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Wishlist <span class="cart_zero">@if(Session::has('cart')){{Session('cart')->totalQty}} @else 0 @endif </span></a>
+									<li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Wishlist <span class="cart_zero">@if(Session::has('cart1')){{Session('cart1')->totalQty}} @else 0 @endif </span></a>
 										<div class="cart_down_area">
-											@if(Session::has('cart'))
+											@if(Session::has('cart1'))
 											@foreach($product_cart as $product)
 											<div class="cart_single">
 												<a href="#"><img src="upload/product/@foreach($product['item']->image as $img)

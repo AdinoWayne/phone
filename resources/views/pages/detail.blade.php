@@ -65,7 +65,7 @@
 					</div>
 					<div class="product_blog_button ">
 						<div class="cart_blog_details blog_icon_border">
-							<a href="#" target="blank"><i class="fa fa-heart-o"></i></a>
+							<a href="{{route('ThemCart',"$product->id")}}" target="blank"><i class="fa fa-heart-o"></i></a>
 						</div>
 						<div class="cart_blog_details blog_icon_border">
 							<a href="#" target="heart"><i class="fa fa-envelope"></i></a>
@@ -89,8 +89,8 @@
 					<div class="cart_blog_item">
 						<p class="rating_dollor rating_margin"><span class="rating_value_two">{{$product->price}} VNĐ</span></p>
 						<div class="add-to-cart">
-							<input type="text" title="Qty" value="1" class="qty"/>
-							<button type="button" title="Add to Cart"  class="cart_button"><span>Add to Cart</span></button>
+							<input type="text" title="Qty" value="1" class="qty" readonly="true" />
+							<button type="button" title="Add to Cart"  class="cart_button" onclick="window.location = 'giohang/{{$product->id}}';"><span>Add to Cart</span></button>
 						</div>
 					</div>
 				</div>

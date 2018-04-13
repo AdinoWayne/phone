@@ -213,13 +213,13 @@
 													</div>
 													<div class="product_button">
 														<div class="cart_details">
-															<a href="#" target="blank">Add to cart</a>
+															<a href="giohang/{{$items->id}}" target="blank">Buy Now</a>
 														</div>
 														<div class="cart_details">
-															<a href="#" target="expand"><i class="fa fa-expand"></i></a>
+															<a href="page/detail/{{$items->id}}" target="expand"><i class="fa fa-expand"></i></a>
 														</div>
 														<div class="cart_details">
-															<a href="#" target="heart"><i class="fa fa-heart-o"></i></a>
+															<a href="{{route('ThemCart',"$items->id")}}" target="heart"><i class="fa fa-heart-o"></i></a>
 														</div>
 													</div>
 												</div>

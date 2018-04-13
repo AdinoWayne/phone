@@ -21,17 +21,17 @@ class AppServiceProvider extends ServiceProvider
             $view->with('menu',$menu);
         });
         view()->composer('layout.header',function($view){
-            if(Session('cart')){
-                $oldCart = Session::get('cart');
+            if(Session('cart1')){
+                $oldCart = Session::get('cart1');
                 $cart = new Cart($oldCart);
-                $view->with(['cart'=>Session::get('cart'),'product_cart'=>$cart->items,'totalPrice'=>$cart->totalPrice,'totalQty'=>$cart->totalQty]);
+                $view->with(['cart'=>Session::get('cart1'),'product_cart'=>$cart->items,'totalPrice'=>$cart->totalPrice,'totalQty'=>$cart->totalQty]);
             }
         });
         view()->composer('pages.wishlist',function($view){
-            if(Session('cart')){
-                $oldCart = Session::get('cart');
+            if(Session('cart1')){
+                $oldCart = Session::get('cart1');
                 $cart = new Cart($oldCart);
-                $view->with(['cart'=>Session::get('cart'),'product_cart'=>$cart->items,'totalPrice'=>$cart->totalPrice,'totalQty'=>$cart->totalQty]);
+                $view->with(['cart'=>Session::get('cart1'),'product_cart'=>$cart->items,'totalPrice'=>$cart->totalPrice,'totalQty'=>$cart->totalQty]);
             }
         });
     }

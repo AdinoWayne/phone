@@ -122,18 +122,18 @@ class homeController extends Controller
     public function getCart(Request $request,$id)
     {
         $product = dProduct::find($id);
-        $oldcart = Session('cart')?Session::get('cart'):null;
+        $oldcart = Session('cart1')?Session::get('cart1'):null;
         $cart = new Cart($oldcart);
         $cart->add($product,$id);
-        $request->session()->put('cart',$cart);
+        $request->session()->put('cart1',$cart);
         return redirect()->back();
     }
     public function getDCart($id)
     {
-        $oldcart = Session('cart')?Session::get('cart'):null;
+        $oldcart = Session('cart1')?Session::get('cart1'):null;
         $cart = new Cart($oldcart);
         $cart->removeItem($id);
-        Session::put('cart',$cart);
+        Session::put('cart1',$cart);
         return redirect()->back();
     }
     public function getWishlist()
