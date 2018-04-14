@@ -130,6 +130,7 @@ Route::get('page/cart','cartController@getCart');
 Route::get('xoa-giohang/{id}','cartController@DeleteCart');
 Route::get('Ajax/giohang/{number}/{price}','cartController@Ajaxgiohang');
 Route::post('page/cart','cartController@postCart');
+Route::get('page/statuscart','cartController@getStatuscart');
 
 
 

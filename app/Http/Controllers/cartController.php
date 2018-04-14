@@ -46,10 +46,17 @@ class cartController extends Controller
     }
     public function postCart(Request $request)
     {
-      // try{
+      try{
           if(Auth::check()){
           $product =Session('product');
           $procolor =dProductColor::where('id_product',$product->id)->orwhere('id_color',$request->color)->first();
+          $saveqty =dProductColor::find($procolor->id);
+          if($saveqty->qty >=4){
+            $saveqty->qty =$saveqty->qty -$request->txtqty;
+            $saveqty->save();
+          }else{
+            return view('pages.cart')->with('Thongbao','Het Hang'); 
+          }
           $order = new dOrders;
           $order->id_user = Auth::user()->id;
           $order->payment = "unpaid";
@@ -62,7 +69,7 @@ class cartController extends Controller
           $orderItem->qty =$request->txtqty;
           $orderItem->price =$product->price;
           $orderItem->save();
-          return redirect('pages.home');
+          return redirect('page/statuscart');
         }else{
           $this->validate($request,
           [
@@ -99,10 +106,16 @@ class cartController extends Controller
           $orderItem->qty =$request->txtqty;
           $orderItem->price =$product->price;
           $orderItem->save();
-          return redirect('pages.home');
+          return redirect('page/statuscart');
         }
-      // }catch(\Illuminate\Database\QueryException $err){
-      //     return view('pages.page404');
-      // }
+      }catch(\Illuminate\Database\QueryException $err){
+          return view('pages.page404');
+      }
+    }
+    public function getStatuscart()
+    {
+      $order =dOrders::orderBy('id','DESC')->first();
+      $orderItem =dOrderItem::where('id_orders',$order->id)->first();
+      return view('pages.statuscart',['order' =>$order ,'orderItem' =>$orderItem]);
     }
 }

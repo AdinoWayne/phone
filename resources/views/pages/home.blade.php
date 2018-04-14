@@ -9,25 +9,6 @@
 			<img src="upload/slide/{{$value->image}}" alt="main slider" title="#htmlcaption{{$value->id}}"/>
 			@endforeach
 		</div>
-		@foreach($slide as $value)
-		<div id="htmlcaption{{$value->id}}" class="nivo-html-caption slider-caption">
-			<div class="slider-progress"></div>
-			<div class="slider-text">
-				<div class="middle-text">
-					<div class="width-cap">
-						<h3 class="slider-tiile-top top-ani-1"><span>Buy Now</span></h3>
-						<h2 class="slider-tiile-middle middle-ani-1"><span>{{$value->name}}</span></h2>
-						<div class="slider-readmore">
-							<a href="#">explorer</a>
-						</div>
-						<div class="slider-shopping">
-							<a href="#">Shopping Now</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		@endforeach 
 	</div>
 	<!-- slider end -->
 </section>

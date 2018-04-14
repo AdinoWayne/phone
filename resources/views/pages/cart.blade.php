@@ -3,11 +3,15 @@
 @section('content')
 <!--Start Shopping Cart top area -->
 <div class="shopping_cart_area">
-		@if(count($errors)> 0)
+	@if(count($errors)> 0)
 	<div class="alert alert-danger">
 		@foreach($errors->all() as $err)
 		{{$err}}<br>
 		@endforeach
+	</div>
+	@endif
+	@if(session('Thongbao'))
+	<div class="alert alert-success">{{session('Thongbao')}}
 	</div>
 	@endif
 	<div class="container">
