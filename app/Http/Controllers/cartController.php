@@ -49,7 +49,7 @@ class cartController extends Controller
       try{
           if(Auth::check()){
           $product =Session('product');
-          $procolor =dProductColor::where('id_product',$product->id)->orwhere('id_color',$request->color)->first();
+          $procolor =dProductColor::where('id_product',$product->id)->where('id_color',$request->color)->first();
           $saveqty =dProductColor::find($procolor->id);
           if($saveqty->qty >=4){
             $saveqty->qty =$saveqty->qty -$request->txtqty;
@@ -83,7 +83,14 @@ class cartController extends Controller
             'txtaddress.required' =>'Bạn chưa nhập address',
           ]);
           $product =Session('product');
-          $procolor =dProductColor::where('id_product',$product->id)->orwhere('id_color',$request->color)->first();
+          $procolor =dProductColor::where('id_product',$product->id)->where('id_color',$request->color)->first();
+          $saveqty =dProductColor::find($procolor->id);
+          if($saveqty->qty >=4){
+            $saveqty->qty =$saveqty->qty -$request->txtqty;
+            $saveqty->save();
+          }else{
+            return view('pages.cart')->with('Thongbao','Het Hang'); 
+          }
           $user = new User;
           $user->fullname = $request->txtname;
           $user->phone =$request->txtphone; 

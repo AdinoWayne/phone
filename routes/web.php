@@ -58,6 +58,8 @@ Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 	});
 	Route::group(['prefix'=>'Ajax'],function(){
 		Route::get('groupproduct/{id_brand}','AjaxController@getGProduct');
+		Route::post('searchtime','AjaxController@postSearchtime');
+		Route::get('searchtime','AjaxController@postSearchtime');
 	});
 	Route::group(['prefix' => 'news'], function() {
 		Route::get('list','newsController@getList');
@@ -96,6 +98,8 @@ Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 		Route::get('password/{id}','userController@getpassword');
 		Route::post('password/{id}','userController@postpassword');
 	});
+	Route::get('bar-chart', 'chartController@getChart');
+	Route::get('bar-chart1', 'chartController@getChart1');
 });
 Route::get('admin/login','userController@getLogin');
 Route::post('admin/login','userController@postLogin');
@@ -131,7 +135,7 @@ Route::get('xoa-giohang/{id}','cartController@DeleteCart');
 Route::get('Ajax/giohang/{number}/{price}','cartController@Ajaxgiohang');
 Route::post('page/cart','cartController@postCart');
 Route::get('page/statuscart','cartController@getStatuscart');
-
+Route::post('filterPrice','AjaxController@getCateByprice');
 
 
 Route::get('/ajax/test','homeController@lmore');

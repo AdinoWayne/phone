@@ -13,6 +13,15 @@
 				</div>
 				@endif
 			</div>
+			<div class="col-sm-2">
+			</div>
+			<div class="col-sm-8">
+				<div class="input-group date" data-provide="datepicker">
+					<label>DateFrom</label><input type="text" class="datepicker" id="fromdate" name="fromdate">
+					<label>DateTo</label><input type="text" class="datepicker" id="todate" name="todate">
+					<input type="button" name="filter" id="filter" value="filter" class="btn btn-default">
+				</div>
+			</div>
 			<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 				<thead>
 					<tr align="center">
@@ -27,7 +36,7 @@
 						<th>Edit</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="search">
 					@foreach($list as $value)
 					<tr class="odd gradeX" align="center">
 						<td>{{$value->id}}</td>
@@ -49,4 +58,35 @@
 	<!-- /.container-fluid -->
 </div>
 <!-- /#page-wrapper -->
+@endsection
+@section('script')
+<script type="text/javascript" language="javascript" src="admin_assets/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(function(){
+			$('#fromdate').datepicker({ 
+				format: 'yyyy-mm-dd'
+			});
+			$('#todate').datepicker({ 
+				format: 'yyyy-mm-dd'
+			});
+		})
+		$('#filter').click(function(){
+			const fromdate =$('#fromdate').val();
+			const todate =$('#todate').val();
+			if(fromdate !='' && todate !='' && fromdate < todate){
+				$.ajax({
+					url:"admin/Ajax/searchtime",
+					type:"get",
+					data:{fromdate:fromdate,todate:todate},
+					success:function(data){
+						$('#search').html(data);
+					}
+				})
+			}else{
+				alert('Choose time again');
+			}
+		});
+	});
+</script>
 @endsection

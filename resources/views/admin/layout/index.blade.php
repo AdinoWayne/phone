@@ -25,6 +25,7 @@
 
     <!-- DataTables Responsive CSS -->
     <link href="admin_assets/bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="admin_assets/dist/css/datepicker.css">
 </head>
 
 <body>

@@ -134,11 +134,11 @@
 			   max: 30000000,
 			   values: [ 1000000, 30000000 ],
 			   slide: function( event, ui ) {
-				$( "#amount" ).val( ui.values[ 0 ] +"đ  " + ui.values[ 1 ] +"đ");
+				$( "#amount" ).val( ui.values[ 0 ] +"đ  " + ui.values[ 1 ] +"đ ");
 			   }
 			  });
 		  $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
-		   "đ  " + $( "#slider-range" ).slider( "values", 1 ) +"đ");
+		   "đ  " + $( "#slider-range" ).slider( "values", 1 ) +"đ ");
 		   
 	
 				
