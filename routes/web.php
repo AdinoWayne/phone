@@ -100,6 +100,7 @@ Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 	});
 	Route::get('bar-chart', 'chartController@getChart');
 	Route::get('bar-chart1', 'chartController@getChart1');
+	Route::get('export/{id}','orderController@pdf');
 });
 Route::get('admin/login','userController@getLogin');
 Route::post('admin/login','userController@postLogin');

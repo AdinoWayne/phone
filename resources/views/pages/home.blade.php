@@ -68,13 +68,6 @@
     		@if($index % 4 == 0) </div><div class="row">@endif
 			@endforeach
 		</div>
-		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<div class="more_feature_area">
-					<h2><a href="#">Load More...</a></h2>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 <!--End Feature area -->
@@ -85,7 +78,7 @@
 			<div class="col-lg-12">
 				<div class="testimonial_list">
 					<div class="testimonial_single">
-						<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a>
+						<a href="#">AdinoPhone is website, good adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a>
 						<p>alexmax</p>
 						<div class="author">
 							<img src="pages_assets/img/author/avatar.png" alt="" />

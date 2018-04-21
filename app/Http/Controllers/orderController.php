@@ -7,6 +7,7 @@ use App\dOrders;
 use App\dProductColor;
 use App\User;
 use App\dOrderItem;
+use PDF;
 class orderController extends Controller
 {
     public function getList(){
@@ -34,5 +35,15 @@ class orderController extends Controller
         $order->payment = $request->select;
         $order->save();
         return redirect('admin/order/list')->with('Thongbao','Sửa thành công');
+    }
+    public function pdf($id)
+    {
+        $order =dOrders::find($id);
+        $total =dOrderItem::selectRaw('SUM(qty*price) as total')->where('id_orders', $id)->groupBy('id_orders')->pluck('total');
+        $index =1;
+        $user =User::find($order->id_user);
+        $pdf =PDF::loadView('admin.exportOrder',['order'=>$order,'index'=>$index,'user'=>$user,'total'=>$total]);
+        return $pdf->download('bill'.$id.'.pdf');
+        // return view('admin.exportOrder',['order'=>$order,'index'=>$index,'user'=>$user,'total'=>$total]);
     }
 }

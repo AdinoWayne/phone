@@ -19,17 +19,7 @@
 						<ul class="blog_author">
 							<li><i class="fa fa-folder-open-o"></i> <a href="#">blog</a></li>
 							<li><i class="fa fa-user"></i>{{$value->user->fullname}}</li>
-							<li><i class="fa fa-eye"></i> Hits: 999</li>
-							<li>
-								<div class="star_blog">
-									Rating: 
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-o"></i>
-								</div>
-							</li>
+							<li><i class="fa fa-eye"></i>ngày viết :{{$value->created_at}}</li>
 						</ul>
 					</div>
 					<div class="blog_info_details">

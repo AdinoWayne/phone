@@ -20,17 +20,7 @@
 						<ul class="blog_author">
 							<li><i class="fa fa-folder-open-o"></i> <a href="#">blog</a></li>
 							<li><i class="fa fa-user"></i>{{$blog->user->fullname}}</li>
-							<li><i class="fa fa-eye"></i> Hits: 999</li>
-							<li>
-								<div class="star_blog">
-									Rating: 
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star"></i>
-									<i class="fa fa-star-o"></i>
-									<i class="fa fa-star-o"></i>
-								</div>
-							</li>
+							<li><i class="fa fa-eye"></i>ngày viết :{{$blog->created_at}}</li>
 						</ul>
 					</div>
 					<div class="blog_info_details">
@@ -56,7 +46,7 @@
 						</div>
 						<div class="col-lg-12">
 							<div class="send_button">
-								<input type="submit" value="Send">
+								<button type="button" class="sign"><span>ADD</span></button>
 							</div>
 						</div>
 					</div>
