@@ -25,7 +25,6 @@ class chartController extends Controller
     {
     	$users = dOrders::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
     	->get();
-        die(var_dump($users));
     	$chart =Charts::database($users , 'area' ,'highcharts')
     	->title('Monthly Money')
     	->elementLabel('Total Money')

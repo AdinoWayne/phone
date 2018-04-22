@@ -34,14 +34,6 @@
 										@endif
 										<div class="account_menu_list">
 											<div class="account_single_item">
-												<h2>Language</h2>
-												<ul id="account_single_nav_2">
-													<li><a href="#">English</a></li>
-													<li><a href="#">France</a></li>
-													<li><a href="#">Germany</a></li>
-												</ul>
-											</div>
-											<div class="account_single_item">
 												<h2>Setting</h2>
 												<ul id="account_single_nav_3">
 													<li><a href="{{route('user')}}">My Account</a></li>
