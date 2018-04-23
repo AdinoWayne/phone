@@ -89,11 +89,11 @@ Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 	});
 	Route::group(['prefix' => 'user'], function() {
 		Route::get('list','userController@getList');
-		Route::get('edit/{id}','userController@getEdit');
-		Route::post('edit/{id}','userController@postEdit');
-		Route::get('add','userController@getAdd');
-		Route::post('add','userController@postAdd');
-		Route::get('delete/{id}','userController@getDelete');
+		Route::get('edit/{id}','userController@getEdit')->middleware('userRole');
+		Route::post('edit/{id}','userController@postEdit')->middleware('userRole');
+		Route::get('add','userController@getAdd')->middleware('userRole');
+		Route::post('add','userController@postAdd')->middleware('userRole');
+		Route::get('delete/{id}','userController@getDelete')->middleware('userRole');
 		Route::get('yoursuser/{id}','userController@getyoursuser');
 		Route::get('password/{id}','userController@getpassword');
 		Route::post('password/{id}','userController@postpassword');
@@ -101,6 +101,9 @@ Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 	Route::get('bar-chart', 'chartController@getChart');
 	Route::get('bar-chart1', 'chartController@getChart1');
 	Route::get('export/{id}','orderController@pdf');
+	Route::get('/blank', function () {
+		return view('admin.blank');
+	});
 });
 Route::get('admin/login','userController@getLogin');
 Route::post('admin/login','userController@postLogin');
@@ -139,7 +142,5 @@ Route::get('page/statuscart','cartController@getStatuscart');
 Route::post('filterPrice','AjaxController@getCateByprice');
 
 
-Route::get('/ajax/test','homeController@lmore');
-Route::get('page/test','homeController@loadmore');
 
 

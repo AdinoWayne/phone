@@ -32,7 +32,7 @@
 								<td>{{$orderItem->productcolor->colors->color}}</td>
 								<td>{{$order->payment}}</td>
 								<td>{{$orderItem->qty}}</td>
-								<td>{{number_format($orderItem->productcolor->product->price, 0, ',', '.')}} đ</td>
+								<td>{{number_format($order->total, 0, ',', '.')}} đ</td>
 							</tr>
 						</table>
 					</div>

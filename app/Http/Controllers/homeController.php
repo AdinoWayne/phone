@@ -55,7 +55,7 @@ class homeController extends Controller
                 'password.required' =>'Bạn chưa nhập password',
             ]);
         if (Auth::attempt(['email'=>$request->email,'password'=>$request->password])) {
-            return redirect('page/home');
+            return redirect()->intended($request->url);
         }else{
             return redirect('page/login')->with('Thongbao','login fail');
         }
@@ -162,21 +162,6 @@ class homeController extends Controller
         }else{
             return redirect('page/home');
         }
-
-    }
-    public function loadmore()
-    {
-        $slide =dSlide::all();
-        $product =dProduct::paginate(12);
-        $blog =dNews::all();
-        $index =0;
-        return view('pages.test',['slide'=>$slide,'product'=>$product,'index'=>$index,'blog'=>$blog]);
-    }
-    public function lmore()
-    {
-        $product =dProduct::paginate(12);
-        die();
-        return view('pages.test',['product'=>$product])->render();
     }
     public function getCate1($id)
     {

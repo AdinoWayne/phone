@@ -17,7 +17,7 @@
 										<th class="width-1"> </th>
 										<th class="width-2">Product Details & Comment</th>
 										<th class="width-3">Add to Cart</th>	
-										<th class="width-4"> </th>	
+										<th class="width-4"></th>
 									</tr>														
 								</thead>
 								<tbody>
@@ -36,7 +36,6 @@
 												<div class="cartpage-pro-dec">
 													<h2><a href="">{{$product['item']['name']}}</a></h2>
 													<p>{{$product['item']['content']}}</p>
-													<textarea class="yourmessage" placeholder="Please, enter your comments..."></textarea>
 												</div>
 											</td>
 											<td>
@@ -45,16 +44,13 @@
 														<span class="regular-price">{{$product['item']['price']}} Đ</span>
 													</div>
 													<div class="pro-add-to-cart">
-														<p><a title="Add to Cart" href="#">Buy Now</a></p>
-													</div>
-													<div class="w-edit">
-														<a href="#">Edit</a>
+														<p><a title="Add to Cart" href="page/detail/{{$product['item']['id']}}">Buy Now</a></p>
 													</div>
 												</div>
 											</td>
 											<td>
 												<div class="cartpage-item-remove">
-													<a title="Remove" href="#">Remove</a>
+													<a title="Remove" href="{{route('XoaCart',$product['item']['id'])}}">Remove</a>
 												</div>
 											</td>
 										</tr>
@@ -63,14 +59,7 @@
 									</tbody>									
 								</table>
 							</div>
-							<div class="cartpage-button">
-								<div class="button-right">
-									<a href="#" class="add-tag-btn cartpage-btn-1">Share Wishlist</a>
-									<a href="#" class="add-tag-btn cartpage-btn-2">Add All to Cart</a>
-									<a href="#" class="add-tag-btn cartpage-btn-3">Update Wishlist</a>
-								</div>	
-							</div>	
-							<a href="#" class="wishlist-back"><i class="fa fa-angle-double-left"></i> Back</a>
+							<a href="page/home" class="wishlist-back"><i class="fa fa-angle-double-left"></i> Back</a>
 						</div>
 					</div>		
 				</div>

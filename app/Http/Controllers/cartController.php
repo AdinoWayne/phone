@@ -75,51 +75,7 @@ public function postCart(Request $request)
       Notification::send($user,new order($order));
       return redirect('page/statuscart');
     }else{
-      $this->validate($request,
-        [
-          'txtname' =>'required',
-          'txtphone' =>'required',
-          'txtaddress' =>'required',
-        ],
-        [
-          'txtname.required' =>'Bạn chưa nhập tên',
-          'txtphone.required' =>'Bạn chưa nhập phone',
-          'txtaddress.required' =>'Bạn chưa nhập address',
-        ]);
-      $product =Session('product');
-      $procolor =dProductColor::where('id_product',$product->id)->where('id_color',$request->color)->first();
-      $saveqty =dProductColor::find($procolor->id);
-      if($saveqty->qty >=4){
-        $saveqty->qty =$saveqty->qty -$request->txtqty;
-        $saveqty->save();
-      }else{
-        return view('pages.cart')->with('Thongbao','Het Hang'); 
-      }
-      $user = new User;
-      $user->fullname = $request->txtname;
-      $user->phone =$request->txtphone; 
-      $user->email = "unknow";
-      $user->password = "unknow";
-      $user->avatar = "unknow";
-      $user->address =$request->txtaddress;  
-      $user->role = "traveller";
-      $user->save();
-      $khach = User::orderBy('id','DESC')->first();
-      $order = new dOrders;
-      $order->id_user = $khach->id;
-      $order->payment = "unpaid";
-      $order->total = $request->txtqty*$product->price;
-      $order->save();
-      $orderItem = new dOrderItem;
-      $id_order = dOrders::orderBy('id','DESC')->first();
-      $orderItem->id_product_color = $procolor->id;
-      $orderItem->id_orders = $id_order->id;
-      $orderItem->qty =$request->txtqty;
-      $orderItem->price =$product->price;
-      $orderItem->save();
-      $user =User::all();
-      Notification::send($user,new order($order));
-      return redirect('page/statuscart');
+      return redirect('page/login');
     }
   }catch(\Illuminate\Database\QueryException $err){
     return view('pages.page404');

@@ -25,6 +25,7 @@
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 				<form method="POST" action="page/login">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
+					<input type="hidden" name="url" value="{{url()->previous()}}">
 					<div class="new_customer">
 						<h3>Registered Customers</h3>
 						<p>If you have an account with us, please log in.</p>
