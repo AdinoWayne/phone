@@ -21,9 +21,15 @@ class groupproductController extends Controller
 		return view('admin.groupproduct.edit',['grproduct'=>$grproduct,'optioncate'=>$parent]);
 	}
 	public function getDelete($id){
-		$current = dGroupProduct::find($id);
-		$current->delete();
-		return redirect('admin/groupproduct/list');
+		try{
+			$current = dGroupProduct::find($id);
+			$current->delete();
+			return redirect('admin/groupproduct/list');
+			catch(\Illuminate\Database\QueryException $err)
+			{
+				return redirect('admin/groupproduct/list')->with('Thongbao','You have to delete table son');
+			}
+		}
 	}
 	public function postAdd(Request $request){
 		$this->validate($request,

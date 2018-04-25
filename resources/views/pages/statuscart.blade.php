@@ -12,9 +12,9 @@
 						<h2>Shopping Cart</h2>
 						<div class="about_hope_text">
 						<ul id="about_hope_details">
-							<li><i class="fa fa-angle-right"></i>Name: {{$order->user->fullname}}</li>
-							<li><i class="fa fa-angle-right"></i>Address: {{$order->user->address}}</li>
-							<li><i class="fa fa-angle-right"></i>Phone: {{$order->user->phone}}</li>
+							<li><i class="fa fa-angle-right"></i>Name: {{Auth::user()->fullname}}</li>
+							<li><i class="fa fa-angle-right"></i>Address: {{Auth::user()->address}}</li>
+							<li><i class="fa fa-angle-right"></i>Phone: {{Auth::user()->phone}}</li>
 						</ul>
 					</div>
 					</div>
@@ -27,23 +27,18 @@
 								<th>Quantity</th>
 								<th>Price</th>
 							</tr>
+							@foreach($order as $value)
+							@foreach($value->orderitem as $item)
 							<tr>
-								<td>{{$orderItem->productcolor->product->name}}</td>
-								<td>{{$orderItem->productcolor->colors->color}}</td>
-								<td>{{$order->payment}}</td>
-								<td>{{$orderItem->qty}}</td>
-								<td>{{number_format($order->total, 0, ',', '.')}} đ</td>
+								<td>{{$item->productcolor->product->name}}</td>
+								<td>{{$item->productcolor->colors->color}}</td>
+								<td>{{$value->payment}}</td>
+								<td>{{$item->qty}}</td>
+								<td>{{number_format($value->total, 0, ',', '.')}} đ</td>
 							</tr>
+							@endforeach
+							@endforeach
 						</table>
-					</div>
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="shopping_cart_main">
-								<div class="shopping_button">
-									<button type="button" title="shop"  class="continue_shopping">Huy Don Hang</button>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>

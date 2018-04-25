@@ -73,28 +73,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-					<div class="shopping_details_des">
-						<h2>Infomation</h2>
-						<div class="shopping_form">
-							<h4>Name<span></span></h4>
-							<input class="input-text validate-postcode" type="text" name="txtname" value="">
-							<h4>Phone</h4>
-							<input class="input-text validate-postcode" type="text" name="txtphone" value="">
-							<h4>address</h4>
-							<input class="input-text validate-postcode" type="text" name="txtaddress" value="">
-						</div>
-					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-					<div class="shopping_details_des">
-						<h2>Discount Codes</h2>
-						<div class="shopping_form">
-							<input class="input-text validate-postcode" type="text" name="estimate_postcode" value="">
-							<div class="review_button product_tag_add">
-								<button type="button" title="Submit Review" class="button">Apply Coupon</button>
-							</div>
-						</div>
-					</div>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 					<div class="total_price">
@@ -106,7 +86,7 @@
 						</table>
 					</div>
 					<div class="check_out_simble review_button ">
-						<button type="submit" title="Submit Review" class="button">Payment</button>
+						<button type="submit" title="Submit Review" class="button">Đặt Hàng</button>
 					</div>
 				</form>
 			</div>

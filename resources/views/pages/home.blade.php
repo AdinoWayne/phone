@@ -19,7 +19,7 @@
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="feature_text">
-					<h4>Featured</h4>
+					<h4>Sản Phẩm Nổi Bật</h4>
 				</div>
 			</div>
 		</div>
@@ -35,7 +35,7 @@
 								@endforeach" alt=""/></a>
 							<div class="product_details">
 								<h2>{{$items->name}}</h2>
-								<p><span class="regular_price">{{$items->price+1}}đ</span> <span class="popular_price">{{$items->price}}đ</span></p>
+								<p><span class="popular_price">{{$items->price}}đ</span></p>
 							</div>
 							<div class="product_detail">
 								<div class="star_icon">
@@ -78,15 +78,15 @@
 			<div class="col-lg-12">
 				<div class="testimonial_list">
 					<div class="testimonial_single">
-						<a href="#">AdinoPhone is website, good adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a>
-						<p>alexmax</p>
+						<a href="page/contact">AdinoPhone is website, good adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a>
+						<p>Adino</p>
 						<div class="author">
 							<img src="pages_assets/img/author/avatar.png" alt="" />
 						</div>
 					</div>
 					<div class="testimonial_single">
-						<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a>
-						<p>alexmax</p>
+						<a href="page/contact">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a>
+						<p>BrureWayne</p>
 						<div class="author">
 							<img src="pages_assets/img/author/avatar.png" alt="" />
 						</div>
@@ -103,7 +103,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="feature_text">
-					<h4>Blog Post</h4>
+					<h4>Blog Tin</h4>
 				</div>
 			</div>
 		</div>

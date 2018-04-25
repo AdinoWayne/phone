@@ -44,6 +44,5 @@ class orderController extends Controller
         $user =User::find($order->id_user);
         $pdf =PDF::loadView('admin.exportOrder',['order'=>$order,'index'=>$index,'user'=>$user,'total'=>$total]);
         return $pdf->download('bill'.$id.'.pdf');
-        // return view('admin.exportOrder',['order'=>$order,'index'=>$index,'user'=>$user,'total'=>$total]);
     }
 }

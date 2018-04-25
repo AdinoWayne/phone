@@ -108,12 +108,18 @@ class productController extends Controller
 		return redirect('admin/product/list')->with('Thongbao','Sửa thành công');
 	}
 	public function getDelete($id){
-		$current = dProduct::find($id);
-		$image =dProduct::with('image')->find($id)->image;
-		foreach ($image as $key => $value) {
-			$value->delete();
+		try{
+			$current = dProduct::find($id);
+			$image =dProduct::with('image')->find($id)->image;
+			foreach ($image as $key => $value) {
+				$value->delete();
+			}
+			$current->delete();	
+			return redirect('admin/product/list')->with('Thongbao','Xóa thành công');
+		}catch(\Illuminate\Database\QueryException $err)
+		{
+			return redirect('admin/product/list')->with('Thongbao','You have to delete table son');
 		}
-		$current->delete();	
-		return redirect('admin/product/list')->with('Thongbao','Sửa thành công');
+
 	}
 }

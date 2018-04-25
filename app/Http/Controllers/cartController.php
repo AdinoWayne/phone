@@ -83,8 +83,11 @@ public function postCart(Request $request)
 }
 public function getStatuscart()
 {
-  $order =dOrders::orderBy('id','DESC')->first();
-  $orderItem =dOrderItem::where('id_orders',$order->id)->first();
-  return view('pages.statuscart',['order' =>$order ,'orderItem' =>$orderItem]);
+  if(Auth::check()){
+    $order =dOrders::orderBy('id','DESC')->where('id_user',Auth::user()->id)->get();
+    return view('pages.statuscart',['order' =>$order]);
+  }else{
+    return view('pages.page404');
+  }
 }
 }

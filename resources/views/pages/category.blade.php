@@ -99,7 +99,7 @@
 														@endforeach" alt=""/></a>
 														<div class="product_details">
 															<h2>{{$items->name}}</h2>
-															<p><span class="regular_price">{{number_format($items->price, 0, ',', '.')}}đ</span> <span class="popular_price">{{number_format($items->price, 0, ',', '.')}}đ</span></p>
+															<p><span class="popular_price">{{number_format($items->price, 0, ',', '.')}}đ</span></p>
 														</div>
 														<div class="product_detail">
 															<div class="star_icon">

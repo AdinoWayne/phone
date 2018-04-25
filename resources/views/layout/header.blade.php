@@ -96,13 +96,10 @@
 										@endforeach
 										<li><a href="shop.html"><span class="Accessaries">Pages</span></a>
 											<div class="home_mega_menu">
-												<a href="about-us.html">About Us</a>
 												<a href="{{route('contact')}}">Contact</a>
 												<a href="{{route('cateblog')}}">Blog</a>
-												<a href="checkout.html">Checkout</a>
 												<a href="{{route('user')}}">My Account</a>
 												<a href="{{route('wishlist')}}">Wishlist</a>
-												<a href="">404 page</a>
 											</div>
 										</li>
 									</ul>
