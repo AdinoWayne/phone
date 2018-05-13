@@ -46,7 +46,7 @@
 											</div>
 										</div>
 									</li>
-									<li><a href="cart.html"><i class="fa fa-shopping-cart"></i>Wishlist <span class="cart_zero">@if(Session::has('cart1')){{Session('cart1')->totalQty}} @else 0 @endif </span></a>
+									<li><a href="page/wishlist"><i class="fa fa-shopping-cart"></i>Wishlist <span class="cart_zero">@if(Session::has('cart1')){{Session('cart1')->totalQty}} @else 0 @endif </span></a>
 										<div class="cart_down_area">
 											@if(Session::has('cart1'))
 											@foreach($product_cart as $product)
@@ -94,7 +94,7 @@
 											</div>
 										</li>
 										@endforeach
-										<li><a href="shop.html"><span class="Accessaries">Pages</span></a>
+										<li><a href="page/home"><span class="Accessaries">Pages</span></a>
 											<div class="home_mega_menu">
 												<a href="{{route('contact')}}">Contact</a>
 												<a href="{{route('cateblog')}}">Blog</a>

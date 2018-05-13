@@ -97,6 +97,7 @@ Route::group(['prefix' => 'admin','middleware'=>'adminlogin'], function() {
 		Route::get('yoursuser/{id}','userController@getyoursuser');
 		Route::get('password/{id}','userController@getpassword');
 		Route::post('password/{id}','userController@postpassword');
+		Route::get('add1',function(){ return view('admin.user.add-user'); });
 	});
 	Route::get('bar-chart', 'chartController@getChart');
 	Route::get('bar-chart1', 'chartController@getChart1');

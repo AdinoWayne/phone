@@ -67,3 +67,8 @@
 		</div>
 		<!-- /#page-wrapper -->
 		@endsection
+@section('script')
+<script type="text/javascript">
+	
+</script>
+@endsection

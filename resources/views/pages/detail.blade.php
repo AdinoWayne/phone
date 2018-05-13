@@ -55,11 +55,10 @@
 						<i class="fa fa-star"></i>
 					</div>
 					<div class="product_rating">
-						<a href="#">1 Review(s) <span>I</span></a>
-						<a href="#"> Add Your Review</a>
+						<Label>+1 Review(s) <span>I</span></Label>
 					</div>
 					<div class="pricing_rate">
-						<p class="stack">Availability:<span class="in-stock">{{$product->version}} and {{$product->status}}</span></p>
+						<p class="stack">Trạng Thái:<span class="in-stock">{{$product->version}} Và {{$product->status}}</span></p>
 						<p class="rating_dollor rating_margin"><span class="rating_value_two">{{$product->price}} VNĐ</span></p>
 						<p class="blog_texts">{{$product->content}}</p>
 					</div>
@@ -78,7 +77,7 @@
 							<li><span class="star_color">*</span><span class="Product_color">color</span></li>
 							<li>
 								<select>
-									<option value="" selected="selected">-- Please Select --</option>
+									<option value="" selected="selected">-- Màu Sắc --</option>
 									@foreach($product->color as $cl)
 									<option value="{{$cl->id}}" style="background-color:{{$cl->html}};">{{$cl->color}}</option>
 									@endforeach
@@ -106,10 +105,10 @@
 				<div class="my_tabs_description">
 					<ul class="tab_style">
 						<li class="active">
-							<a data-toggle="tab" href="#tab-1">Product Description</a>
+							<a data-toggle="tab" href="#tab-1">Thông Tin Điện Thoại</a>
 						</li>
 						<li>
-							<a data-toggle="tab" href="#tab-3">Product Tags</a>
+							<a data-toggle="tab" href="#tab-3">Review</a>
 						</li>
 					</ul>
 					<div class="tab-content tab_content_style">
@@ -285,7 +284,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="feature_text feature_upsell">
-					<h4>Related Products</h4>
+					<h4>điện thoại tương tự</h4>
 				</div>
 				<div class="row">
 					<div class="upsell_product_list">
