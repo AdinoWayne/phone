@@ -62,7 +62,7 @@ class slideController extends Controller
             ]);
         $current = dSlide::find($id);
         $current->name = $request->txtName;
-        $current->link =$request->txtlink; 
+        $current->link = $request->txtlink; 
         if($request->hasFile('txtHinh')){
             $file =$request->file('txtHinh');
             $name =$file->getClientOriginalName();
@@ -72,8 +72,6 @@ class slideController extends Controller
             }
             $file->move("upload/slide",$hinh);
             $current->image =$hinh;
-        }else{
-            $current->image ="";
         }
         $current->save();
         return redirect('admin/slide/list')->with('Thongbao','Sua thành công');

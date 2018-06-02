@@ -7,23 +7,21 @@
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="breadcrumb-single blog_top_area">
 					<ul id="breadcrumbs">
-						<li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+						<li><a href="page/home"><i class="fa fa-home"></i>Home</a></li>
 						<li><span>Ι</span></li>
 						<li>Blog</li>
 					</ul>
 				</div>
 				@foreach($blog as $value)
 				<div class="blog_details_area">
-					<i class="fa fa-picture-o"></i>
 					<div class="blog_details_list">
 						<ul class="blog_author">
-							<li><i class="fa fa-folder-open-o"></i> <a href="#">blog</a></li>
 							<li><i class="fa fa-user"></i>{{$value->user->fullname}}</li>
 							<li><i class="fa fa-eye"></i>ngày viết :{{$value->created_at}}</li>
 						</ul>
 					</div>
 					<div class="blog_info_details">
-						<h2><a class="blog_info_heading" href="#">{{$value->name}}</a></h2>
+						<h2><a class="blog_info_heading" href="{{route('singleblog',$value->id)}}">{{$value->name}}</a></h2>
 						<img class="imgblog" src="upload/blog/{{$value->image}}">
 						<p>{{$value->summary}}.</p>
 						<a class="readmore_link" href="{{route('singleblog',$value->id)}}" title="Images">Read more ...</a>

@@ -52,7 +52,7 @@ class userController extends Controller
 			$file->move("upload/user",$hinh);
 			$current->avatar =$hinh;
 		}else{
-			$current->avatar ="";
+			$current->avatar ="noimage.jpg";
 		}  
 		$current->password =bcrypt($request->txtpassword);
 		try{

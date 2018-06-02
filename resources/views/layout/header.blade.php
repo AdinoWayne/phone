@@ -6,10 +6,17 @@
 						<form action="page/search" name="myForm" method="POST">
 							{!! csrf_field() !!}
 							<div class="search_box">
-								<input name="Name" id="itp" class="input_text" type="text" value="Search"/>
-								<button type="submit" class="btn-search">
-									<span><i class="fa fa-search"></i></span>
-								</button>
+								<div class="input-group">
+									<select name="txtdk" class="selectpicker" >
+										<option>Name</option>
+										<option>Ram</option>
+										<option>OS</option>
+									</select>
+									<input name="Name" id="itp" class="input_text" type="text" value="Search"/>
+									<button type="submit" class="btn-search">
+										<span><i class="fa fa-search"></i></span>
+									</button>
+								</div>
 							</div>
 						</form>
 						<!--End Search area -->

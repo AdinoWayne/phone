@@ -48,10 +48,6 @@
 								<label>Qty</label>
 								<input class="form-control" name="txtQty" value="{{$product->qty}}" />
 							</div>
-							<div class="form-group">
-								<label>Cost</label>
-								<input class="form-control" name="txtCost" value="{{$product->cost}}"/>
-							</div>
 							<button type="submit" class="btn btn-default">ProductDetail Edit</button>
 							<button type="reset" class="btn btn-default">Reset</button>
 							<form>

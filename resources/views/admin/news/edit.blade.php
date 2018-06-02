@@ -22,7 +22,7 @@
 				<div class="alert alert-success">{{session('Thongbao')}}
 				</div>
 				@endif
-				<form action="" method="POST">
+				<form action="admin/news/edit/{{$news->id}}" method="POST" enctype="multipart/form-data">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group">
 						<div class="form-group">
@@ -37,14 +37,18 @@
 							<label>Content</label>
 							<textarea id="demo" class="form-control ckeditor" rows="3" name="txtcontent">{{$news->content}}</textarea>
 						</div>
+						<div class="form-group">
+							<label>Upload Image</label>
+							<input type="file" name="txtHinh" class="form-control"/>
+						</div>
 						<button type="submit" class="btn btn-default">News Edit</button>
 						<button type="reset" class="btn btn-default">Reset</button>
-						<form>
-						</div>
 					</div>
-					<!-- /.row -->
-				</div>
-				<!-- /.container-fluid -->
+				</form>
 			</div>
-			<!-- /#page-wrapper -->
-			@endsection
+			<!-- /.row -->
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- /#page-wrapper -->
+	@endsection

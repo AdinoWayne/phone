@@ -12,7 +12,7 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<form method="POST" action="page/register">
+				<form method="POST" action="page/register" enctype="multipart/form-data">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="new_customer">
 						<h3>Register Customers</h3>

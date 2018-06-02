@@ -19,6 +19,7 @@
 						<th>ID</th>
 						<th>Name</th>
 						<th>Summary</th>
+						<th>Image</th>
 						<th>Author</th>
 						<th>Content</th>
 						<th>DateCreated</th>
@@ -32,6 +33,7 @@
 						<td>{{$value->id}}</td>
 						<td>{{$value->name}}</td>
 						<td>{{$value->summary}}</td>
+						<td><img width="200px" src="upload/blog/{{$value->image}}" /></td>
 						<td>{{$value->user->fullname}}</td>
 						<td class="comment">{{$value->content}}</td>
 						<td>{{$value->created_at}}</td>

@@ -24,20 +24,21 @@ class groupproductController extends Controller
 		try{
 			$current = dGroupProduct::find($id);
 			$current->delete();
-			return redirect('admin/groupproduct/list');
-			catch(\Illuminate\Database\QueryException $err)
-			{
-				return redirect('admin/groupproduct/list')->with('Thongbao','You have to delete table son');
-			}
+			return redirect('admin/groupproduct/list')->with('Thongbao','Detele successfully');
+		}
+		catch(\Illuminate\Database\QueryException $err)
+		{
+			return redirect('admin/groupproduct/list')->with('Thongbao','You have to delete table son');
 		}
 	}
 	public function postAdd(Request $request){
 		$this->validate($request,
 			[
-				'txtname' =>'required|min:3|max:100'
+				'txtname' =>'required|unique:group_product,name|min:3|max:100'
 			],
 			[
 				'txtname.required' =>'Bạn chưa nhập tên',
+				'txtname.unique' =>'Tên đã tồn tại',
 				'txtname.min' =>'Tên quá ít kí tự',
 				'txtname.max' =>'Tên quá dài',
 			]);
@@ -51,11 +52,10 @@ class groupproductController extends Controller
 		$current =dGroupProduct::find($id);
 		$this->validate($request,
 			[
-				'txtName'=>'required|unique:LoaiTin,Ten|min:3|max:100'
+				'txtName'=>'required|min:3|max:100'
 			],
 			[
 				'txtName.required' =>'Bạn chưa nhâp',
-				'txtName.unique' =>'Tên đã tồn tại',
 				'txtName.min' =>'Tên quá ít kí tự',
 				'txtName.max' =>'Tên quá dài',
 			]

@@ -28,7 +28,7 @@
 						<label>GroupPhone Parent</label>
 						<select class="form-control" name="cateparent">
 							@foreach($optioncate as $value)
-							<option @if($grproduct->idTheLoai == $value->id)
+							<option @if($grproduct->id_brand == $value->id)
 								{{"selected"}}
 							@endif value="{{$value->id}}">{{$value->name}}</option>
 							@endforeach
@@ -40,7 +40,7 @@
 					</div>
 					<button type="submit" class="btn btn-default">GroupPhone Edit</button>
 					<button type="reset" class="btn btn-default">Reset</button>
-					<form>
+					</form>
 					</div>
 				</div>
 				<!-- /.row -->

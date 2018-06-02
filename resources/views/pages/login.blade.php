@@ -27,7 +27,7 @@
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<input type="hidden" name="url" value="{{url()->previous()}}">
 					<div class="new_customer">
-						<h3>Registered Customers</h3>
+						<h3>Login</h3>
 						<p>If you have an account with us, please log in.</p>
 						@if(count($errors)>0)
 						<div class="alert alert-danger">
@@ -55,7 +55,6 @@
 						</ul>
 					</div>
 					<div class="create_button_area">
-						<a href="#">Forgot Your Password?</a>
 						<button type="submit" class="create_button">
 							Login
 						</button>

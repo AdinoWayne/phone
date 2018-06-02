@@ -22,7 +22,7 @@ class brandController extends Controller
         $current = dBrand::find($id);
         try{
             $current->delete();
-            return redirect('admin/brand/list');
+            return redirect('admin/brand/list')->with('Thongbao','Delete successfully');
         }
         catch(\Illuminate\Database\QueryException $err)
         {
@@ -45,10 +45,9 @@ class brandController extends Controller
         return redirect('admin/brand/add')->with('Thongbao','Thêm thành công');
     }
     public function postEdit(Request $request,$id){
-        $current =dBrand::find($id);
         $this->validate($request,
             [
-                'txtName'=>'required|unique:TheLoai,Ten|min:3|max:100'
+                'txtName'=>'required|unique:brand,name|min:3|max:100'
             ],
             [
                 'txtName.required' =>'Bạn chưa nhâp',
@@ -57,8 +56,10 @@ class brandController extends Controller
                 'txtName.max' =>'Tên quá dài',
             ]
         );
+        $current =dBrand::find($id);
         $current->name =$request->txtName;
         $current->save();
+
         return redirect('admin/brand/list')->with('Thongbao','Edit thành công');
     }
 }

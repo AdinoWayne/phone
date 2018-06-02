@@ -22,29 +22,31 @@
 				<div class="alert alert-success">{{session('Thongbao')}}
 				</div>
 				@endif
-				<form action="" method="POST">
+				<form action="admin/news/add" method="POST" enctype="multipart/form-data">
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group">
-						<div class="form-group">
-							<label>Name</label>
-							<input class="form-control" name="txtname" placeholder="" />
-						</div>
-						<div class="form-group">
-							<label>Summary</label>
-							<input class="form-control" name="txtsummary" placeholder="" />
-						</div>
-						<div class="form-group">
-							<label>Content</label>
-							<textarea id="demo" class="form-control ckeditor" rows="3" name="txtcontent"></textarea>
-						</div>
-						<button type="submit" class="btn btn-default">News Add</button>
-						<button type="reset" class="btn btn-default">Reset</button>
-						<form>
-						</div>
+						<label>Name</label>
+						<input class="form-control" name="txtname" placeholder="input title" />
 					</div>
-					<!-- /.row -->
-				</div>
-				<!-- /.container-fluid -->
+					<div class="form-group">
+						<label>Summary</label>
+						<input class="form-control" name="txtsummary" placeholder="" />
+					</div>
+					<div class="form-group">
+						<label>Upload Image</label>
+						<input type="file" name="txtHinh" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label>Content</label>
+						<textarea id="demo" class="form-control ckeditor" rows="3" name="txtcontent"></textarea>
+					</div>
+					<button type="submit" class="btn btn-default">News Add</button>
+					<button type="reset" class="btn btn-default">Reset</button>
+				</form>
 			</div>
-			<!-- /#page-wrapper -->
-			@endsection
+			<!-- /.row -->
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- /#page-wrapper -->
+	@endsection

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class dBrand extends Model
 {
+	public $timestamps = false;
 	protected $table = "brand";
 	public function groupproduct()
 	{

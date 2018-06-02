@@ -38,13 +38,13 @@
 					</div>
 					<button type="submit" class="btn btn-default">Slide Add</button>
 					<button type="reset" class="btn btn-default">Reset</button>
-					<form>
-					</div>
-				</div>
-				<!-- /.row -->
+				</form>
 			</div>
-			<!-- /.container-fluid -->
 		</div>
-		<!-- /#page-wrapper -->
+		<!-- /.row -->
+	</div>
+	<!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
 
 @endsection

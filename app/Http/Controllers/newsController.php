@@ -33,6 +33,19 @@ class newsController extends Controller
 		$current->name = $request->txtname;
 		$current->summary =$request->txtsummary;
 		$current->content =$request->txtcontent;
+		if($request->hasFile('txtHinh')){
+			$file =$request->file('txtHinh');
+			$name =$file->getClientOriginalName();
+			$hinh =str_random(4)."_".$name;
+			while (file_exists("upload/blog/".$hinh)) {
+				$hinh =str_random(4)."_".$name;
+			}
+			$file->move("upload/blog",$hinh);
+			$current->image =$hinh;
+		}else{
+			die('abc');
+			$current->image ="";
+		}
 		$current->id_user =$user->id;
 		$current->created_at =Carbon::now();
 		$current->save();
@@ -52,6 +65,16 @@ class newsController extends Controller
 		$current->name = $request->txtname;
 		$current->summary =$request->txtsummary;
 		$current->content =$request->txtcontent;
+		if($request->hasFile('txtHinh')){
+			$file =$request->file('txtHinh');
+			$name =$file->getClientOriginalName();
+			$hinh =str_random(4)."_".$name;
+			while (file_exists("upload/blog/".$hinh)) {
+				$hinh =str_random(4)."_".$name;
+			}
+			$file->move("upload/blog",$hinh);
+			$current->image =$hinh;
+		}
 		$current->save();
 		return redirect('admin/news/list')->with('Thongbao','Sửa thành công');
 	}

@@ -32,10 +32,9 @@
 						<ul class="list-group">
 							<li class="list-group-item">Status 
 								<select class="form-control" name="select" >
-									<option @if($order->payment == "successfully") {{"selected"}} @endif value="successfully">Đã Thanh toán</option>
-									<option @if($order->payment == "unpaid") {{"selected"}} @endif value="unpaid">Chưa Thanh toán</option>
+									<option @if($order->payment == "Hoàn Thành") {{"selected"}} @endif value="Hoàn Thành">Đã Thanh toán</option>
+									<option @if($order->payment == "đang xử lý") {{"selected"}} @endif value="đang xử lý">Chưa Thanh toán</option>
 								</select>
-
 							</li>
 							<li class="list-group-item">Date Time : {{$order->created_at}} <button type="submit" class="btn btn-default">Lưu</button></li>
 						</ul>

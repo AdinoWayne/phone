@@ -39,17 +39,6 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-				<div class="contact_us_info">
-					<input type="text" placeholder="Name *">
-					<input type="text" placeholder="Email *">
-					<input type="text" placeholder="Subject">
-					<textarea placeholder="Message *" rows="10" cols="30"></textarea>
-					<div class="controls">
-						<input type="submit" class="btn btn-large btn-primary submit" value="Submit">
-					</div>
-				</div>
-			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 				<div class="company_right_area">
 					<h6>INFORMATION</h6>

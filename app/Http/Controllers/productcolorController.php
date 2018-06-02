@@ -18,11 +18,17 @@ class productcolorController extends Controller
 		return view('admin.productcolor.add',['pro'=>$parent1,'color' =>$parent]);
 	}
 	public function postAdd(Request $request){
+		$this->validate($request,
+			[
+				'txtQty' =>'numeric'
+			],
+			[
+				'txtQty.numeric' =>'input number in qty',
+			]);
 		$current = new dProductColor;
 		$current->id_product = $request->cateloglist;
 		$current->id_color =$request->cateparent;
 		$current->qty = $request->txtQty;
-		$current->cost =$request->txtCost;
 		$current->save();
 		return redirect('admin/productcolor/add')->with('Thongbao','Thêm thành công');
 	}
@@ -43,10 +49,9 @@ class productcolorController extends Controller
 		$current->id_product =$request->cateloglist;
 		$current->id_color =$request->cateparent;
 		$current->qty =$request->txtQty;
-		$current->cost =$request->txtCost;
 		try{
 			$current->save();
-			return redirect('admin/productcolor/list');
+			return redirect('admin/productcolor/list')->with('Thongbao','Edit Successfully');
 		}
 		catch(\Illuminate\Database\QueryException $err)
 		{

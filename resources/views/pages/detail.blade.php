@@ -59,15 +59,12 @@
 					</div>
 					<div class="pricing_rate">
 						<p class="stack">Trạng Thái:<span class="in-stock">{{$product->version}} Và {{$product->status}}</span></p>
-						<p class="rating_dollor rating_margin"><span class="rating_value_two">{{$product->price}} VNĐ</span></p>
+						<p class="rating_dollor rating_margin"><span class="rating_value_two">{{number_format($product->price, 0, ',', '.')}} VNĐ</span></p>
 						<p class="blog_texts">{{$product->content}}</p>
 					</div>
 					<div class="product_blog_button ">
 						<div class="cart_blog_details blog_icon_border">
 							<a href="{{route('ThemCart',"$product->id")}}" target="blank"><i class="fa fa-heart-o"></i></a>
-						</div>
-						<div class="cart_blog_details blog_icon_border">
-							<a href="#" target="heart"><i class="fa fa-envelope"></i></a>
 						</div>
 					</div>
 				</div>
@@ -76,20 +73,24 @@
 						<ul id="options_selection">
 							<li><span class="star_color">*</span><span class="Product_color">color</span></li>
 							<li>
-								<select>
-									<option value="" selected="selected">-- Màu Sắc --</option>
-									@foreach($product->color as $cl)
-									<option value="{{$cl->id}}" style="background-color:{{$cl->html}};">{{$cl->color}}</option>
-									@endforeach
-								</select>
+								<div class="product-color">
+									<div class="color-choose">
+										@foreach($product->color as $cl)
+										<div>
+											<input data-image="{{$cl->color}}" type="radio" id="{{$cl->color}}" name="color" value="{{$cl->id}}" checked>
+											<label for="{{$cl->color}}" data-toggle="tooltip" title="{{$cl->color}}" ><span></span></label>
+										</div>
+										@endforeach
+									</div>
+								</div>
 							</li>
 						</ul>
 					</div>
 					<div class="cart_blog_item">
-						<p class="rating_dollor rating_margin"><span class="rating_value_two">{{$product->price}} VNĐ</span></p>
+						<p class="rating_dollor rating_margin"><span class="rating_value_two">{{number_format($product->price, 0, ',', '.')}} VNĐ</span></p>
 						<div class="add-to-cart">
 							<input type="text" title="Qty" value="1" class="qty" readonly="true" />
-							<button type="button" title="Add to Cart"  class="cart_button" onclick="window.location = 'giohang/{{$product->id}}';"><span>Add to Cart</span></button>
+							<button type="button" title="Add to Cart"  class="cart_button" onclick="window.location = 'giohang/{{$product->id}}';"><span>BUY NOW</span></button>
 						</div>
 					</div>
 				</div>
@@ -304,7 +305,7 @@
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star-o"></i>
 										</div>
-										<p>{{$upsell->price}}</p>
+										<p>{{number_format($upsell->price, 0, ',', '.')}} đ</p>
 									</div>
 								</div>
 							</div>
@@ -315,5 +316,5 @@
 			</div>
 		</div>
 	</div>
-	
+
 	@endsection

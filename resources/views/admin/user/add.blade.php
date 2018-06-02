@@ -26,35 +26,63 @@
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group">
 						<label>Name</label>
-						<input class="form-control" name="txtname"/>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							<input class="form-control" name="txtname" placeholder="full name user" />
+						</div>
 					</div>
 					<div class="form-group">
 						<label>Email</label>
-						<input type="email" class="form-control" name="txtemail"/>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+							<input type="email" class="form-control" name="txtemail" placeholder="email@example"/>
+						</div>
 					</div>
 					<div class="form-group">
 						<label>Password</label>
-						<input type="password" class="form-control" name="txtpassword"/>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+							<input type="password" class="form-control" name="txtpassword" placeholder="input password"/>
+						</div>
 					</div>
 					<div class="form-group">
 						<label>password Again</label>
-						<input type="password" class="form-control" name="txtpassword1"/>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+							<input type="password" class="form-control" name="txtpassword1" placeholder="input password"/>
+						</div>
 					</div>
 					<div class="form-group">
 						<label>Phone</label>
-						<input class="form-control" name="txtphone"/>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+							<input class="form-control" name="txtphone" placeholder="input 10 number"/>
+						</div>
 					</div>
 					<div class="form-group">
 						<label>Address</label>
-						<input class="form-control" name="txtaddress"/>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+							<input class="form-control" name="txtaddress" placeholder="input Address"/>
+						</div>
 					</div>
 					<div class="form-group">
 						<label>Role</label>
-						<input class="form-control" name="txtrole"/>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+							<select name="txtrole" class="form-control selectpicker" >
+								<option>customer</option>
+								<option>Admin</option>
+								<option>mod</option>
+							</select>
+						</div>
 					</div>
 					<div class="form-group">
 						<label>Upload Image</label>
-						<input type="file" name="txtHinh" class="form-control"/>
+						<div class="input-group">
+							<span class="input-group-addon"><i class="glyphicon glyphicon-film"></i></span>
+							<input type="file" name="txtHinh" class="form-control"/>
+						</div>
 					</div>
 					<button type="submit" class="btn btn-default">User Add</button>
 					<button type="reset" class="btn btn-default">Reset</button>
@@ -67,8 +95,8 @@
 		</div>
 		<!-- /#page-wrapper -->
 		@endsection
-@section('script')
-<script type="text/javascript">
-	
-</script>
-@endsection
+		@section('script')
+		<script type="text/javascript">
+
+		</script>
+		@endsection

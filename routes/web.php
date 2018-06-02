@@ -134,8 +134,11 @@ Route::get('page/single-blog/{id}',['as'=>'singleblog','uses'=>'homeController@g
 Route::get('page/contact',['as'=>'contact','uses'=>'homeController@getContact']);
 Route::get('page/user',['as'=>'user','uses'=>'homeController@getUser']);
 Route::post('changepw','AjaxController@postchangepw');
+
 Route::get('giohang/{id}',['as'=>'cart','uses'=>'cartController@getTemp']);
+
 Route::get('page/cart','cartController@getCart');
+
 Route::get('xoa-giohang/{id}','cartController@DeleteCart');
 Route::get('Ajax/giohang/{number}/{price}','cartController@Ajaxgiohang');
 Route::post('page/cart','cartController@postCart');

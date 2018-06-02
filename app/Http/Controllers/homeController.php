@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
+use Mail;
 use Illuminate\Http\Request;
 use App\dSlide;
 use App\dProduct;
@@ -20,7 +21,7 @@ class homeController extends Controller
     	// $product =dProduct::take(12)->get()->toArray();
     	// $product =array_chunk($product,4,true);
     	$product =dProduct::take(12)->get();
-    	$blog =dNews::all();
+    	$blog =dNews::take(4)->get();
     	$index =0;
     	return view('pages.home',['slide'=>$slide,'product'=>$product,'index'=>$index,'blog'=>$blog]);
     }
@@ -100,7 +101,7 @@ class homeController extends Controller
             $file->move("upload/user",$hinh);
             $current->avatar =$hinh;
         }else{
-            $current->avatar ="";
+            $current->avatar ="noimage.jpg";
         }  
         $current->password =bcrypt($request->txtpassword);
         try{
@@ -115,7 +116,8 @@ class homeController extends Controller
     public function postSearch(Request $request)
     {
         $keyword =$request->Name;
-        $product = dProduct::where('name','like',"%$keyword%")->paginate(9);
+        $dk = $request->txtdk;
+        $product = dProduct::where($dk,'like',"%$keyword%")->paginate(9);
         $index =0;
         return view('pages.category',['index'=>$index,'pro'=>$product]);
     }

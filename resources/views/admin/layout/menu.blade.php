@@ -105,9 +105,6 @@
                    <li>
                     <a href="admin/order/list">List Order</a>
                   </li>
-                  <li>
-                    <a href="admin/order/add">Add Order</a>
-                  </li>
                 </ul>
                 <!-- /.nav-second-level -->
               </li>

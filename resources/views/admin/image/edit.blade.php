@@ -26,7 +26,7 @@
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 					<div class="form-group">
 						<label>Phone name</label>
-						<input class="form-control" name="txtName" value="{{$image->product->name}}" />
+						<input class="form-control" name="txtName" value="{{$image->product->name}}" readonly="true" />
 					</div>
 					<div class="form-group">
 						<label>Upload Image</label>

@@ -35,7 +35,7 @@
 								@endforeach" alt=""/></a>
 							<div class="product_details">
 								<h2>{{$items->name}}</h2>
-								<p><span class="popular_price">{{$items->price}}đ</span></p>
+								<p><span class="popular_price">{{number_format($items->price, 0, ',', '.')}} đ</span></p>
 							</div>
 							<div class="product_detail">
 								<div class="star_icon">
@@ -71,32 +71,6 @@
 	</div>
 </div>
 <!--End Feature area -->
-<!--Start Testimonila area -->
-<div class="carousel_testimonial_area">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="testimonial_list">
-					<div class="testimonial_single">
-						<a href="page/contact">AdinoPhone is website, good adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a>
-						<p>Adino</p>
-						<div class="author">
-							<img src="pages_assets/img/author/avatar.png" alt="" />
-						</div>
-					</div>
-					<div class="testimonial_single">
-						<a href="page/contact">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</a>
-						<p>BrureWayne</p>
-						<div class="author">
-							<img src="pages_assets/img/author/avatar.png" alt="" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!--End Testimonila area -->
 <!--Start Blog area -->
 <div class="blog_post_area">
 	<div class="container">
@@ -112,12 +86,12 @@
 				@foreach($blog as $value)
 				<div class="col-lg-3">
 					<div class="single_blog">
-						<a href="#"><img src="upload/blog/{{$value->image}}" alt="" /></a>
+						<a href="{{route('singleblog',$value->id)}}"><img src="upload/blog/{{$value->image}}" alt="" /></a>
 						<div class="blog_details">
-							<a href="#">{{$value->name}}</a>
+							<a href="{{route('singleblog',$value->id)}}">{{$value->name}}</a>
 							<p>{{$value->summary}}...</p>
 							<h3>{{$value->created_at}}</h3>
-							<a href="#">
+							<a href="{{route('singleblog',$value->id)}}">
 								<div class="read_more">
 									<i class="fa fa-angle-right"></i>
 								</div>

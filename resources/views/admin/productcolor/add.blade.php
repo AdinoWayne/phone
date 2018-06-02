@@ -44,10 +44,6 @@
 						<label>Qty</label>
 						<input class="form-control" name="txtQty"/>
 					</div>
-					<div class="form-group">
-						<label>Cost</label>
-						<input class="form-control" name="txtCost"/>
-					</div>
 					<button type="submit" class="btn btn-default">ProductDetail Add</button>
 					<button type="reset" class="btn btn-default">Reset</button>
 					<form>

@@ -32,7 +32,6 @@
 						<th>Created_at</th>
 						<th>updated_at</th>
 						<th>Detail</th>
-						<th>Delete</th>
 						<th>Edit</th>
 					</tr>
 				</thead>
@@ -46,7 +45,6 @@
 						<td>{{$value->created_at}}</td>
 						<td>{{$value->updated_at}}</td>
 						<td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/order/detail/{{$value->id}}"> Detail</a></td>
-						<td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/order/delete/{{$value->id}}"> Delete</a></td>
 						<td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/order/edit/{{$value->id}}">Edit</a></td>
 					</tr>
 					@endforeach
